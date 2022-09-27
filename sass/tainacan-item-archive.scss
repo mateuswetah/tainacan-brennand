@@ -1,0 +1,177 @@
+/* Tainacan Items list customization */
+.theme-items-list,
+.tainacan-modal,
+.tainacan-tooltip {
+    --tainacan-secondary: #eb4200;
+    --tainacan-primary: #ffefbc;
+    --tainacan-yellow1: #ffefbc;
+    --tainacan-warning: #ffefbc;
+    --tainacan-success: #3c5102;
+    --tainacan-input-color: #191919;
+    --tainacan-item-hover-background-color: #f9f9f9;
+    --tainacan-item-heading-hover-background-color: #f2f2f2;
+    --tainacan-font-family: Montserrat,sans-serif;
+    --tainacan-base-font-size: 1.125em;
+}
+
+/* Page top container needs some padding */
+.tainacan-items-archive-page .mkdf-content .mkdf-content-inner > .mkdf-full-width > .mkdf-full-width-inner {
+    padding-top: 40px !important;
+}
+
+/* Page header */
+.mkdf-row-grid-section.tainacan-items-list--header {
+    margin-top: 25px;
+
+    img {
+        max-width: 136px;
+        float: right;
+        border-radius: 1px;
+        margin-left: 2em;
+        margin-bottom: 2em;
+        
+        @media screen and (max-width: 1024px) {
+            max-width: 100px;
+        }
+        @media screen and (max-width: 768px) {
+            max-width: 300px;
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+    .vc_separator {
+        height: 2px;
+        width: 20%;
+        background-color: #eb4200;
+    }
+    hr {
+        height: 1px;
+        border-top: 1px solid #ebebeb;
+        color: transparent;
+    }
+}
+
+/* Filters, Input Fields */
+.tainacan-modal,
+.theme-items-list {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: normal;
+    }
+
+    #filters-modal .modal-content h3,
+    #filters-modal .modal-content h3 {
+        font-size: 1.25em;
+        position: relative;
+
+        &:after {
+            height: 2px;
+            background: #3c5102;
+            width: 25%;
+            content: '';
+            position: absolute;
+            bottom: -0.125em;
+            left: 0;
+        }
+    }
+    input.input,
+    .input,
+    textarea.textarea,
+    .textarea,
+    input[type="color"].input,
+    input[type="date"].input,
+    input[type="datetime-local"].input,
+    input[type="datetime"].input,
+    input[type="email"].input,
+    input[type="number"].input,
+    input[type="month"].input,
+    input[type="password"].input,
+    input[type="search"].input,
+    input[type="tel"].input,
+    input[type="text"].input,
+    input[type="time"].input,
+    input[type="url"].input,
+    input[type="week"].input {
+        line-height: 1.25em !important;
+        box-sizing: border-box;
+    }
+    #filters-modal .modal-content {
+        box-sizing: border-box;
+    }
+    .metadata-title {
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+    .metadata-label,
+    .tainacan-metadatum .label {
+        line-height: normal !important;
+    }
+    .dropdown .dropdown-menu .dropdown-content .dropdown-item,
+    .dropdown .dropdown-menu .dropdown-content .has-link a,
+    .dropdown .dropdown-menu .has-link .dropdown-content a,
+    .autocomplete .dropdown-menu .dropdown-content .dropdown-item,
+    .autocomplete .dropdown .dropdown-menu .dropdown-content .has-link a,
+    .dropdown .autocomplete .dropdown-menu .dropdown-content .has-link a,
+    .autocomplete .dropdown .dropdown-menu .has-link .dropdown-content a,
+    .dropdown .autocomplete .dropdown-menu .has-link .dropdown-content a {
+        box-sizing: border-box;
+    }
+    .control.has-icons-right .icon .mdi-magnify::before {
+        color: #3c5102 !important;
+    }
+    .tainacan-form .form-submit .control .button,
+    .advanced-search-container .button {
+        border-radius: 50%;
+        border-radius: 50px !important;
+        height: 2.5em !important;
+    }
+    .tainacan-li-checkbox-list {
+        box-sizing: border-box;
+    }
+
+    /* View Modes */
+    .table-container .table-wrapper table.tainacan-table td {
+        box-sizing: border-box;
+    }
+    .tainacan-cards-container .tainacan-card .media .list-metadata p.metadata-description {
+        margin-top: 0 !important;
+        line-height: 1.185em !important;
+    }
+    #items-list-area #items-list-results .tainacan-cards-container .tainacan-card,
+    #items-list-area #items-list-results .tainacan-list-container .tainacan-list,
+    #items-list-area #items-list-results .tainacan-masonry-container .tainacan-masonry-item,
+    #items-list-area #items-list-results .tainacan-records-container .tainacan-record {
+        overflow: hidden;
+        box-shadow: 0 2px 10px -9px #000;
+        transition: box-shadow 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 3px 11px -9px #000;
+
+            .metadata-title,
+            .metadata-title p {
+                color: #3c5102 !important;
+            }
+        }
+    }
+    .tainacan-tooltip .tooltip-inner {
+        line-height: 1.25em !important;
+    }
+    .metadata-menu.tainacan-form {
+        box-sizing: border-box;
+    }
+
+    /* Pagination */
+    .pagination-area .pagination .pagination-link,
+    .pagination-area .pagination .pagination-previous,
+    .pagination-area .pagination .pagination-next {
+        align-items: baseline !important;
+    }
+}

@@ -1,0 +1,11 @@
+/* Tainacan Gutenberg Blocks colors */
+:root {
+   --tainacan-block-primary: #eb4200;
+   --tainacan-block-secondary: #ffefbc;
+}
+
+
+/* Remaining imports */
+@import './tainacan-collection-archive.scss';
+@import './tainacan-item-archive.scss';
+@import './tainacan-item-single.scss';
