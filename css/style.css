@@ -1,11 +1,38 @@
+
+/* Remaining imports */
+@import './tainacan-collection-archive.css';
+@import './tainacan-item-archive.css';
+@import './tainacan-item-single.css';
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+ @tailwind base;
+
+ /**
+  * This injects Tailwind's component classes and any component classes
+  * registered by plugins.
+  */
+ @tailwind components;
+ 
+ /**
+  * This injects Tailwind's utility classes and any utility classes registered
+  * by plugins.
+  */
+ @tailwind utilities;
+ 
+ /**
+  * Use this directive to control where Tailwind injects the hover, focus,
+  * responsive, dark mode, and other variants of each class.
+  *
+  * If omitted, Tailwind will append these classes to the very end of
+  * your stylesheet by default.
+  */
+ @tailwind variants;
+
 /* Tainacan Gutenberg Blocks colors */
 :root {
    --tainacan-block-primary: #eb4200;
    --tainacan-block-secondary: #ffefbc;
 }
-
-
-/* Remaining imports */
-@import './tainacan-collection-archive.scss';
-@import './tainacan-item-archive.scss';
-@import './tainacan-item-single.scss';
