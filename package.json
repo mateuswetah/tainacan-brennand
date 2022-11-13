@@ -4,7 +4,7 @@
   "description": "Suporte para telas do plugin Tainacan em uso no tema da Oficina Brennand",
   "main": "index.js",
   "scripts": {
-    "compile-styles": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 sass/style.scss style.css",
+    "compile-styles": "tailwindcss -i css/style.css -o style.css",
     "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output style.min.css style.css",
     "build": "npm run compile-styles && npm run css-minify"
   },
@@ -17,7 +17,7 @@
   "homepage": "https://github.com/mateuswetah/tainacan-brennand#readme",
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
-    "node-sass": "^4.14.1"
+    "tailwindcss": "^3.2.4"
   },
   "dependencies": {}
 }
