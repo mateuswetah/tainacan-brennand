@@ -26,6 +26,9 @@ define('TAINACAN_BRENNAND_PLUGIN_DIR_PATH', $plugin_root_dir);
 /* Basic styles and script enqueues */
 require TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'inc/enqueues.php';
 
+/* Adds custom files for Tainacan view modes */
+require TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'inc/viewmodes.php';
+
 /* Requires several settings, functions and helpers */
 require TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'inc/plugin.php';
 require TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'inc/navigation.php';
