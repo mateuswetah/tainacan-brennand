@@ -1,6 +1,7 @@
 /* Single Items page */
 .tainacan-items-single-page {
-    /* --tainacan-secondary: #eb4200;
-    --tainacan-primary: #ffefbc;
-    --tainacan-font-family: Montserrat,sans-serif; */
+    --tainacan-background-color: #DDDAD3;
+    --tainacan-secondary: #AF3C20;
+    --tainacan-font-family: Kobel, sans-serif;
+    --tainacan-primary: rgba(209,204,189,0.9);
 }
