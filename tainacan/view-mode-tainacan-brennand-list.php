@@ -49,13 +49,13 @@
 			<li class="tainacan-brennand-grid-item">
 				<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="filefestival-grid-item-thumbnail">
+						<div class="tainacan-brennand-grid-item-thumbnail">
 							<?php the_post_thumbnail( 'large' ); ?>
 							<!-- <?php tainacan_the_document(); ?> -->
 							<div class="skeleton"></div> 
 						</div>
 					<?php else : ?>
-						<div class="filefestival-grid-item-thumbnail">
+						<div class="tainacan-brennand-grid-item-thumbnail">
 							<?php echo '<img alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
 							<div class="skeleton"></div> 
 						</div>

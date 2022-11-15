@@ -11,6 +11,8 @@
    /* --tainacan-yellow1: #ffefbc;
     --tainacan-warning: #ffefbc;
     --tainacan-success: #3c5102; */
+    --tainacan-gray4: var(--tainacan-secondary, #AF3C20);
+    --tainacan-gray5: var(--tainacan-secondary, #AF3C20);
     --tainacan-label-color: var(--tainacan-secondary, #AF3C20);
     --tainacan-info-color: var(--tainacan-secondary, #AF3C20);
     --tainacan-heading-color: var(--tainacan-secondary, #AF3C20);
@@ -21,7 +23,9 @@
     --tainacan-item-heading-hover-background-color:rgba(209,204,189,0.9);
     --tainacan-skeleton-color: rgba(209,204,189,0.9);
     --tainacan-base-font-size: 1.125em; 
-} */
+    --tainacan-one-column: 2rem;
+    --tainacan-container-padding: 2rem;
+}
 .theme-items-list:not(.tainacan-modal) {
     display: grid;
     grid-template-areas: 'control items' 'filters items';
@@ -39,4 +43,98 @@
 .theme-items-list:not(.tainacan-modal) .items-list-area {
     grid-area: items;
     max-width: 100% !important;
+}
+.tainacan-modal #filters-modal .modal-content,
+.theme-items-list #filters-modal .modal-content {
+    padding: var(--tainacan-one-column, 2rem) !important;
+}
+.tainacan-modal .search-area input.input[type="search"]:not(.is-danger),
+.tainacan-modal .search-area input.input[type="search"]:not(.is-danger):hover,
+.tainacan-modal .search-area input.input[type="search"]:not(.is-danger):active,
+.tainacan-modal .search-area input.input[type="search"]:not(.is-danger):focus,
+.tainacan-modal .search-area input.input[type="search"]:not(.is-danger):focus-within,
+.theme-items-list .search-area input.input[type="search"]:not(.is-danger),
+.theme-items-list .search-area input.input[type="search"]:not(.is-danger):hover,
+.theme-items-list .search-area input.input[type="search"]:not(.is-danger):active,
+.theme-items-list .search-area input.input[type="search"]:not(.is-danger):focus,
+.theme-items-list .search-area input.input[type="search"]:not(.is-danger):focus-within {
+    border-width: 4px !important;
+}
+.tainacan-modal .b-checkbox.checkbox input[type="checkbox"] + .check,
+.theme-items-list .b-checkbox.checkbox input[type="checkbox"] + .check {
+    border-radius: 0px !important;
+    border-width: 2px !important;
+}
+.tainacan-modal .pagination-area .pagination .icon .mdi-chevron-left::before,
+.theme-items-list .pagination-area .pagination .icon .mdi-chevron-left::before {
+    content: "previous" !important;
+}
+.tainacan-modal .pagination-area .pagination .icon .mdi-chevron-right::before,
+.theme-items-list .pagination-area .pagination .icon .mdi-chevron-right::before,
+.tainacan-modal .tainacan-icon-arrowright::before,
+.theme-items-list .tainacan-icon-arrowright::before {
+    content: "next" !important;
+}
+.tainacan-modal .dropdown .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover,
+.tainacan-modal .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover,
+.tainacan-modal .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover,
+.tainacan-modal .autocomplete .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover,
+.tainacan-modal .autocomplete .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover,
+.tainacan-modal .autocomplete .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover,
+.theme-items-list .dropdown .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover,
+.theme-items-list .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover,
+.theme-items-list .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover,
+.theme-items-list .autocomplete .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover,
+.theme-items-list .autocomplete .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover,
+.theme-items-list .autocomplete .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover,
+.tainacan-modal .dropdown .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover .gray-icon,
+.tainacan-modal .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover .gray-icon,
+.tainacan-modal .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover .gray-icon,
+.tainacan-modal .autocomplete .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover .gray-icon,
+.tainacan-modal .autocomplete .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover .gray-icon,
+.tainacan-modal .autocomplete .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover .gray-icon,
+.theme-items-list .dropdown .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover .gray-icon,
+.theme-items-list .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover .gray-icon,
+.theme-items-list .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover .gray-icon,
+.theme-items-list .autocomplete .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover .gray-icon,
+.theme-items-list .autocomplete .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover .gray-icon,
+.theme-items-list .autocomplete .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover .gray-icon {
+    color: var(--tainacan-background-color, #DDDAD3) !important;
+}
+.tainacan-modal .tainacan-icon-arrowdown::before,
+.theme-items-list .tainacan-icon-arrowdown::before {
+    content: "next";
+    rotate: 90deg;
+}
+.tainacan-modal .filter-tags-list .swiper ul.swiper-wrapper,
+.theme-items-list .filter-tags-list .swiper ul.swiper-wrapper {
+    padding-bottom: 2px;
+}
+.tainacan-modal .filter-tags-list .filter-tag,
+.theme-items-list .filter-tags-list .filter-tag {
+    border-radius: 0px !important;
+    border-width: 2px !important;
+}
+.tainacan-modal .control.has-icons-right .icon .mdi-magnify::before,
+.theme-items-list .control.has-icons-right .icon .mdi-magnify::before {
+    color: var(--tainacan-secondary, #AF3C20) !important;
+    font-size: 1.5rem !important;
+}
+.theme-items-list .label,
+.tainacan-modal .label,
+.theme-items-list .input,
+.tainacan-modal .input,
+.theme-items-list .button,
+.tainacan-modal .button,
+.theme-items-list .filter-tags-list,
+.tainacan-modal .filter-tags-list,
+.theme-items-list .collapse-all__text,
+.tainacan-modal .collapse-all__text,
+.theme-items-list .collapse-label,
+.tainacan-modal .collapse-label,
+.theme-items-list .checkbox-label-text,
+.tainacan-modal .checkbox-label-text,
+.theme-items-list .pagination-link,
+.tainacan-modal .pagination-link {
+    font-weight: bold !important;
 }

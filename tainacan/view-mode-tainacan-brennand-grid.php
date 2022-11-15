@@ -42,30 +42,29 @@
 ?>
 
 <?php if ( have_posts() ) : ?>
-	<ul class="tainacan-brennand-grid-container">
+	<ul class="tainacan-brennand-grid-container grid grid-cols-3 gap-6 place-items-stretch m-6">
 
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); ?>
 			
-			<li class="tainacan-brennand-grid-item">
+			<li class="tainacan-brennand-grid-item border-4 border-ob-red p-3.5 text-center">
 				<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="filefestival-grid-item-thumbnail">
-							<?php the_post_thumbnail( 'large' ); ?>
+						<div class="tainacan-brennand-grid-item-thumbnail">
+							<?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'mx-auto attachment-tainacan-medium-full size-tainacan-medium-full'] ); ?>
 							<!-- <?php tainacan_the_document(); ?> -->
 							<div class="skeleton"></div> 
 						</div>
 					<?php else : ?>
-						<div class="filefestival-grid-item-thumbnail">
-							<?php echo '<img alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
+						<div class="tainacan-brennand-grid-item-thumbnail">
+							<?php echo '<img class="mx-auto" alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
 							<div class="skeleton"></div> 
 						</div>
 					<?php endif; ?>
 
-					<div class="metadata-title">
-						<h3><?php the_title(); ?></h3>
+					<div class="metadata-title text-3xl font-bold">
+						<h3 class="truncate"><?php the_title(); ?></h3>
 					</div>
-					<div class="metadata-description">
-						<p>
+					<div class="metadata-description text-xl">
 							<?php
 								foreach($metadata_objects as $metadata_object) {
 									if ( $metadata_object->get_metadata_type() !== 'Tainacan\Metadata_Types\Core_Title' ) {
@@ -77,7 +76,6 @@
 									}
 								}
 							?>
-						</p>
 					</div>
 				</a>
 			</li>	

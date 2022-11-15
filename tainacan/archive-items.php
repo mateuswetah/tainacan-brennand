@@ -27,7 +27,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="tainacan-items-list--container">
+		<div class="tainacan-items-list--container text-ob-red">
 			<?php 
 				tainacan_the_faceted_search([
 					'default_view_mode' => 'masonry',
