@@ -7,93 +7,58 @@ if ( !function_exists('tainacan_brennand_get_adjacent_item_links') ) {
 	function tainacan_brennand_get_adjacent_item_links() {
 		
 		// We use Tainacan own method for obtaining previous and next item objects
-		if (function_exists('tainacan_get_adjacent_items') && isset($_GET['pos'])) {
+		if ( function_exists('tainacan_get_adjacent_items') && isset($_GET['pos']) ) {
 			$adjacent_items = tainacan_get_adjacent_items();
 
-			if (isset($adjacent_items['next'])) {
+			if ( isset($adjacent_items['next']) )
 				$next_link_url = $adjacent_items['next']['url'];
-				$next_title = $adjacent_items['next']['title'];
-			} else {
+			else
 				$next_link_url = false;
-			}
-			if (isset($adjacent_items['previous'])) {
+			
+			if ( isset($adjacent_items['previous']) )
 				$previous_link_url = $adjacent_items['previous']['url'];
-				$previous_title = $adjacent_items['previous']['title'];
-			} else {
+			else
 				$previous_link_url = false;
-			}
 
 		} else {
 			//Get the links to the Previous and Next Post
 			$previous_link_url = get_permalink( get_previous_post() );
 			$next_link_url = get_permalink( get_next_post() );
-
-			//Get the title of the previous post and next post
-			$previous_title = get_the_title( get_previous_post() );
-			$next_title = get_the_title( get_next_post() );
 		}
 
 		$previous = '';
 		$next = '';
 
-		if (function_exists('tainacan_get_adjacent_items') && isset($_GET['pos'])) {
-			if ($adjacent_items['next']) {
-				$next_thumb = $adjacent_items['next']['thumbnail']['tainacan-medium'][0];
-			}
-			if ($adjacent_items['previous']) {
-				$previous_thumb = $adjacent_items['previous']['thumbnail']['tainacan-medium'][0];
-			}
-		} else {
-			//Get the thumnail url of the previous and next post
-			$previous_thumb = get_the_post_thumbnail_url( get_previous_post(), 'tainacan-medium' );
-			$next_thumb = get_the_post_thumbnail_url( get_next_post(), 'tainacan-medium' );
-		}
-
-		$previous_post_image_output = isset($previous_thumb) ? $previous_thumb : '';
-		$next_post_image_output = isset($next_thumb) ? $next_thumb : '';
-
 		// Creates the links
 		$previous = $previous_link_url === false ? '' : (
-			'<div class="mkdf-blog-single-prev-holder clearfix">'
-				. ( !empty($previous_post_image_output) ? '<div class="mkdf-blog-single-thumb-wrapper">
-						<a 
-								itemprop="url"		
-								class="mkdf-blog-single-nav-thumb"
-								href="'. $previous_link_url . '">
-							<img width="200" height="200" class="attachment-medium size-medium wp-post-image" src=" ' . $previous_post_image_output  . '">
-						</a>
-					</div>' : '') . 	
-				'<div class="mkdf-blog-single-nav-wrapper">
-					<a 
-							itemprop="url"		
-							class="mkdf-blog-single-nav-thumb"
-							href="'. $previous_link_url . '">
-						' . ( !empty( $previous_title ) ? $previous_title : '' ) . '
-						<span class="mkdf-blog-single-nav-date">' . __('Previous', 'tainacan-brennand') . '</span>
-					</a>
-				</div>
-			</div>');
+			'<a 
+						class="inline-flex items-center gap-1"
+						itemprop="url"		
+						href="'. $previous_link_url . '">
+					<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="rotate-180	inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
+						<g id="Grupo_92" data-name="Grupo 92" transform="translate(19.11 33.031) rotate(180)">
+							<g id="Grupo_89" data-name="Grupo 89" transform="translate(0 0)">
+								<path id="Caminho_91" data-name="Caminho 91" d="M16.1,0,0,16.6,16.147,33.031,19.1,30.015,5.961,16.6,19.11,3.014Z" transform="translate(0)"></path>
+							</g>
+						</g>
+					</svg>
+					<span>' . __('Resultado anterior', 'tainacan-brennand') . '</span>
+				</a>');
 
 		$next = $next_link_url === false ? '' : (
-			'<div class="mkdf-blog-single-next-holder clearfix">
-				<div class="mkdf-blog-single-nav-wrapper">
-					<a 
-							itemprop="url"		
-							class="mkdf-blog-single-nav-thumb"
-							href="'. $next_link_url . '">
-						' . ( !empty( $next_title ) ? $next_title : '' ) . '
-						<span class="mkdf-blog-single-nav-date">' . __('Next', 'tainacan-brennand') . '</span>
-					</a>
-				</div>'
-				. ( !empty($next_post_image_output) ? '<div class="mkdf-blog-single-thumb-wrapper">
-						<a 
-								itemprop="url"		
-								class="mkdf-blog-single-nav-thumb"
-								href="'. $next_link_url . '">
-							<img width="200" height="200" class="attachment-medium size-medium wp-post-image" src =" ' . $next_post_image_output  . '">
-						</a>
-					</div>' : '') . '	
-			</div>');
+			'<a 
+					class="inline-flex items-center gap-1"	
+					itemprop="url"		
+					href="'. $next_link_url . '">
+				<span>' . __('Próximo resultado', 'tainacan-brennand') . '</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
+					<g id="Grupo_92" data-name="Grupo 92" transform="translate(19.11 33.031) rotate(180)">
+						<g id="Grupo_89" data-name="Grupo 89" transform="translate(0 0)">
+							<path id="Caminho_91" data-name="Caminho 91" d="M16.1,0,0,16.6,16.147,33.031,19.1,30.015,5.961,16.6,19.11,3.014Z" transform="translate(0)"></path>
+						</g>
+					</g>
+				</svg>
+			</a>');
 
 		return ['next' => $next, 'previous' => $previous];
 	}
@@ -118,9 +83,20 @@ if ( !function_exists('tainacan_brennand_item_navigation') ) {
 		$next = $adjacent_links['next'];
 		
 		?>
+			<a 
+					class="inline-flex items-center gap-1 m-l-auto"	
+					itemprop="url"		
+					href="<?php echo tainacan_get_source_item_list_url_brennand(); ?>">
+				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="rotate-180	inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
+					<g id="Grupo_92" data-name="Grupo 92" transform="translate(19.11 33.031) rotate(180)">
+						<g id="Grupo_89" data-name="Grupo 89" transform="translate(0 0)">
+							<path id="Caminho_91" data-name="Caminho 91" d="M16.1,0,0,16.6,16.147,33.031,19.1,30.015,5.961,16.6,19.11,3.014Z" transform="translate(0)"></path>
+						</g>
+					</g>
+				</svg>
+				<span><?php _e( 'Voltar para a lista', 'tainacan-brennand' ); ?></span>
+			</a>
 			<?php if ($previous !== '' || $next !== '') : ?>
-			<section class="mkdf-blog-single-navigation">
-				<div class="mkdf-blog-single-navigation-inner clearfix">
 				<?php
 					if ( $previous !== '' ) {
 						echo $previous;
@@ -130,8 +106,6 @@ if ( !function_exists('tainacan_brennand_item_navigation') ) {
 						echo $next;
 					}
 				?>
-				</div>
-			</section>
 			<?php endif; ?>
 		<?php
 	}

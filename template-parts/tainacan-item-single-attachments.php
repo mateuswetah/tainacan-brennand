@@ -11,9 +11,9 @@
 
     global $post;
 
-    if ( function_exists('tainacan_the_media_component') && (!empty( $attachments ) || ( $is_gallery_mode && tainacan_has_document() ) ) ) {
+    if ( (!empty( $attachments ) || ( $is_gallery_mode && tainacan_has_document() ) ) ) {
     ?>
-        <section class="tainacan-item-section tainacan-item-section--<?php echo ((!$is_gallery_mode ? 'attachments' : 'gallery')) ?>">
+        <section class="border-5 border-[var(--section-color)] p-3.5 text-center tainacan-item-section tainacan-item-section--<?php echo ((!$is_gallery_mode ? 'attachments' : 'gallery')) ?>">
 
             <?php 
             
@@ -125,11 +125,3 @@
     ?>
         </section>
 <?php } ?>
-
-<?php if ( !function_exists('tainacan_the_media_component') ) {
-
-    ?> <section class="tainacan-item-section tainacan-item-section--<?php echo ((!$is_gallery_mode ? 'attachments' : 'gallery')) ?>"> <?php
-        tainacan_the_document();
-    ?> </section> <?php
-
-} ?>

@@ -27,6 +27,16 @@ module.exports = {
           '1x1': '405px',
           '2x2': '842px',
         },
+        borderWidth: {
+          DEFAULT: '1px',
+          '0': '0',
+          '2': '2px',
+          '3': '3px',
+          '4': '4px',
+          '5': '5px',
+          '6': '6px',
+          '8': '8px',
+        },
         fontSize: {
           // font-size: 90px
           'ob-text-2': ['5.625rem',{

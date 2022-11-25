@@ -1,7 +1,82 @@
 /* Single Items page */
 .tainacan-items-single-page {
-    --tainacan-background-color: #DDDAD3;
-    --tainacan-secondary: #AF3C20;
+    --tainacan-background-color: rgba(209,204,189,var(--tw-bg-opacity));
+    --tainacan-secondary: var(--section-color, #AF3C20);
     --tainacan-font-family: Kobel, sans-serif;
     --tainacan-primary: rgba(209,204,189,0.9);
+}
+
+.tainacan-media-component__swiper-main .swiper-slide-content img {
+    margin: 0 auto;
+}
+
+.tainacan-items-single-page section .tainacan-item-section__metadatum {
+    margin-bottom: 0.5rem;
+}
+
+/* Custom css for some of the Tainacan Single item Section */
+.tainacan-items-single-page section {    
+    padding-top: 1.5rem;
+    padding-bottom: 1.0rem;
+}
+.tainacan-items-single-page section:not(:last-child) {
+    border-bottom: 5px solid var(--section-color, #AF3C20);
+}
+
+/* Seção principal do Acervo online */
+.tainacan-items-single-page section.metadata-section-slug-default_section {
+    font-weight: bold;
+    font-size: 1.375rem; /* 22px */
+    border-bottom: none;
+}
+.tainacan-items-single-page section.metadata-section-slug-default_section .tainacan-metadata-label {
+    visibility: visible;
+    display: none;
+}
+@media screen and (min-width: 769px) {
+    .tainacan-items-single-page section.metadata-section-slug-default_section .tainacan-item-section__metadatum:first-child {
+        font-size: 2rem;
+    }   
+}
+
+/* Seção de créditos do Acervo online */
+.tainacan-items-single-page section.metadata-section-slug-creditos {
+    font-size: 1.375rem; /* 22px */
+}
+.tainacan-items-single-page section.metadata-section-slug-creditos .tainacan-metadata-label {
+    text-transform: lowercase;
+    display: inline;
+    margin-right: 0.25rem;
+}
+.tainacan-items-single-page section.metadata-section-slug-creditos .tainacan-metadata-label::after {
+    content: ':';
+    display: inline-block;
+}
+.tainacan-items-single-page section.metadata-section-slug-creditos .tainacan-metadata-value {
+    display: inline;
+}
+
+/* Seção de classificação do Acervo online */
+.tainacan-items-single-page section.metadata-section-slug-secao-de-classificacao-do-acervo-online {
+    font-weight: bold;
+    font-size: 1.5rem; /* 24px */
+    text-transform: uppercase;
+}
+.tainacan-items-single-page section.metadata-section-slug-secao-de-classificacao-do-acervo-online .tainacan-metadata-label {
+    visibility: visible;
+    display: none;
+}
+
+/* Seção de descrição do Acervo online */
+.tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online {
+    font-size: 1.375rem; /* 22px */
+    max-height: 100%;
+    overflow-y: auto;
+}
+.tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online .tainacan-metadata-label {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online .tainacan-metadata-value {
+    font-weight: bold;
 }
