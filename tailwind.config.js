@@ -13,6 +13,7 @@ module.exports = {
           'ob-red' : '#af3c20',
           'ob-green' : '#006240',
           'ob-background-gray' : '#d1ccbd',
+          'ob-gray': '#dddad3',
         },
         width: {
           '1x1': 'calc(25% - 32px)',
@@ -27,6 +28,10 @@ module.exports = {
           '2x2': '842px',
         },
         fontSize: {
+          // font-size: 90px
+          'ob-text-2': ['5.625rem',{
+            lineHeight: '3.125rem',
+          }],
           // font-size: 55px
           'ob-title-1': ['3.43rem',{
             lineHeight: '3.625rem',
@@ -35,11 +40,11 @@ module.exports = {
           'ob-text-1': ['2.81rem',{
             lineHeight: '3.125rem',
           }],
-          // font-size: 90px
-          'ob-text-2': ['5.625rem',{
-            lineHeight: '3.125rem',
+          // font-size: 40px
+          'ob-text-5': ['2.5rem',{
+            lineHeight: '2.68rem',
           }],
-          //fomt-size: 38px
+          //font-size: 38px
           'ob-text-3': ['2.375rem', {
             lineHeight: '2.5rem',
           }],
@@ -50,6 +55,7 @@ module.exports = {
         },
         fontFamily : {
           'kobel': ['Kobel'],
+          'sans': ['Kobel', 'Helvetica', 'Arial', 'sans-serif'],
         },
       },
     },

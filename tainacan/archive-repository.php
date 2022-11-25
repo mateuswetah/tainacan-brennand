@@ -1,4 +1,3 @@
-<?php get_header(); ?>
 
 <div class="mkdf-full-width">
 	<div class="mkdf-full-width-inner">
@@ -50,4 +49,3 @@
 		</div>
 	</div>
 </div>
-<?php get_footer(); ?>

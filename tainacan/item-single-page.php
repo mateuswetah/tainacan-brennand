@@ -1,4 +1,3 @@
-<?php get_header(); ?>
 
 <div id="app">
     <main id="main" class="main">         
@@ -50,6 +49,3 @@
         </div>
     </main>
 </div>
-
-<?php get_footer(); ?>
-

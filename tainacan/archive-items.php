@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+
 
 <div class="">
 	<div class="">
@@ -50,4 +50,4 @@
 		</div>
 	</div>
 </div>
-<?php get_footer(); ?>
+

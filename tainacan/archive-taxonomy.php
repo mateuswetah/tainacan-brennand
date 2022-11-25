@@ -1,7 +1,5 @@
 <?php
 
-get_header(); 
-
 $current_wpterm = tainacan_get_term();
 
 $current_taxonomy = get_taxonomy( $current_wpterm->taxonomy );
@@ -72,4 +70,3 @@ $src = wp_get_attachment_image_src($image, 'full');
 		</div>
 	</div>
 </div>
-<?php get_footer(); ?>
