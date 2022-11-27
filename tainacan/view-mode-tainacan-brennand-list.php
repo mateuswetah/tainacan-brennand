@@ -6,12 +6,12 @@
 			
 			<li class="py-8 px-5 md:px-0 flex flex-col md:flex-row border-t-[5px] border-ob--ob-red text-[var(--section-color)] w-full">
 				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 mb-4 md:mb-0">
+					<div class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 md:mb-0">
 						<?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'w-full h-auto wp-post-image'] ); ?>
 						<div class="skeleton"></div> 
 					</div>
 				<?php else : ?>
-					<div class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 mb-4 md:mb-0">
+					<div class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 md:mb-0">
 						<?php echo '<img class="w-full h-auto wp-post-image" alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
 						<div class="skeleton"></div> 
 					</div>
@@ -24,7 +24,7 @@
 								the_title();
 
 								$data_item_metadata = $item->get_metadata(array(
-									'id' => 67// 238629 - ID of the year metadata
+									'id' => 238629 // 67 - ID of the year metadata
 								));
 								$data = false;
 								
@@ -43,7 +43,7 @@
 						<div class="max-w-[798px] font-kobel font-bold text-size">
 							<?php
 								$category_item_metadata = $item->get_metadata(array(
-									'id' => 442// 304439 - ID of the category metadata
+									'id' => 304439 // 442 - ID of the category metadata
 								));
 								$category = false;
 								

@@ -2,7 +2,7 @@
 
 $item = tainacan_get_item();
 $terms_item_metadata = $item->get_metadata(array(
-    'id' => 442 // 127 - ID of the terms metadata
+    'id' => 127 // 442 - ID of the terms metadata
 ));
 $terms = [];
 
@@ -26,7 +26,7 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
         <ul class="grid list-none mx-0 my-5">
         <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); ?>
             <li class="grid-sizer"></li>
-            <li class="grid-item group px-3.5 py-6 border-4 border-ob-red text-center">
+            <li class="grid-item group px-3.5 py-6 border-3 lg:border-4 border-ob-red text-center">
                 <a class="w-full aspect-square" href="<?php echo get_permalink(); ?>">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="tainacan-brennand-grid-item-thumbnail">

@@ -20,7 +20,12 @@
     padding-bottom: 1.0rem;
 }
 .tainacan-items-single-page section:not(:last-child) {
-    border-bottom: 5px solid var(--section-color, #AF3C20);
+    border-bottom: 3px solid var(--section-color, #AF3C20);
+}
+@media screen and (min-width: 1024px) {
+    .tainacan-items-single-page section:not(:last-child) {
+        border-bottom: 5px solid var(--section-color, #AF3C20);
+    }
 }
 .tainacan-items-single-page section a {
     text-decoration: underline;

@@ -23,7 +23,7 @@
 								the_title();
 
 								$data_item_metadata = $item->get_metadata(array(
-									'id' => 67// 238629 - ID of the year metadata
+									'id' => 238629 // 67 - ID of the year metadata
 								));
 								$data = false;
 								
@@ -39,7 +39,7 @@
 					</div>
 					<?php
 						$category_item_metadata = $item->get_metadata(array(
-							'id' => 442// 304439 - ID of the category metadata
+							'id' => 304439 //442 - ID of the category metadata
 						));
 						$category = false;
 						

@@ -66,19 +66,21 @@ section class... */
 	</li>
 </ul>
 
-<div class="mt-[50px] flex flex-col xl:flex-row xl:justify-between gap-9">
+<div class="mt-[50px] flex flex-col lg:flex-row lg:justify-between gap-9">
 
-    <div class="w-full xl:w-50% mb-10 xl:mb-0">
-        <div class="w-auto sticky top-[50px]">
+    <h1 itemprop="name" class="block lg:hidden border-b-3 lg:border-b-5 border-b-[var(--section-color)] text-[55px] leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
+
+    <div class="w-full lg:w-50%">
+        <div class="w-auto lg:sticky top-[50px]">
             <?php include(TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-attachments.php' ); ?>
         </div>
     </div>
 
-    <div class="relative w-full xl:w-50% text-[var(--section-color)]">
+    <div class="relative w-full lg:w-50% text-[var(--section-color)]">
 
-        <div class="overflow-y-auto max-h-[68vh] h-full mb-7 pb-12 border-b-5 border-b-[var(--section-color)]">
+        <div class="overflow-y-auto lg:max-h-[68vh] h-full mb-7 pb-12 border-b-3 lg:border-b-5 border-b-[var(--section-color)]">
 
-            <h1 itemprop="name" class="border-b-5 border-b-[var(--section-color)] text-[55px] leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
+            <h1 itemprop="name" class="hidden lg:block border-b-3 lg:border-b-5 border-b-[var(--section-color)] text-[55px] leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
 
             <?php tainacan_the_metadata_sections(array(
                 'hide_name' => true,
@@ -94,7 +96,7 @@ section class... */
                 )
             )); ?>
 
-            <div class="absolute flex justify-between w-full h-12 bottom-0 text-xl font-bold items-center gap-2 leading-[1.05] lowercase bg-[var(--background-color)]">
+            <div class="absolute flex justify-between w-full h-12 bottom-0 text-xl font-bold items-center gap-3 leading-[1.05] lowercase bg-[var(--background-color)]">
                 <?php tainacan_brennand_item_navigation(); ?>
             </div>
         </div>    

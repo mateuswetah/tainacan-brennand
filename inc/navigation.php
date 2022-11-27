@@ -84,7 +84,7 @@ if ( !function_exists('tainacan_brennand_item_navigation') ) {
 		
 		?>
 			<a 
-					class="inline-flex items-center gap-1 m-l-auto"	
+					class="inline-flex items-center gap-1 mr-auto"	
 					itemprop="url"		
 					href="<?php echo tainacan_get_source_item_list_url_brennand(); ?>">
 				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="mr-[4px] mt-[2px] rotate-180 inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
