@@ -23,7 +23,7 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
         <h2 class="mt-2 font-bold uppercase ob-text-5" id="tainacan-item-items-related-to-this-label">
             <?php echo _e('Veja também', 'tainacan-brennand') ?>
         </h2>
-        <ul class="grid list-none mx-0 my-5">
+        <ul class="modular-grid grid list-none mx-0 my-5">
         <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); ?>
             <li class="grid-sizer"></li>
             <li class="grid-item group px-3.5 py-6 border-3 lg:border-4 border-ob-red text-center">

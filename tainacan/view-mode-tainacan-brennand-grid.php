@@ -1,5 +1,5 @@
 <?php if ( have_posts() ) : ?>
-	<ul class="tainacan-brennand-grid-container grid">
+	<ul class="tainacan-brennand-grid-container modular-grid grid">
 		<li class="grid-sizer"></li>
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); $item = tainacan_get_item(); ?>
 			
