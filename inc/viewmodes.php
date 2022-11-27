@@ -33,7 +33,7 @@ function tainacan_brennand_register_tainacan_view_modes() {
 			'label' => __( 'Lista', 'tainacan-brennand' ),
 			'description' => __( 'Uma lista de itens feita para o Acervo Brennand', 'tainacan-brennand' ),
 			// 'icon' => '<span class="icon"><i class="tainacan-icon tainacan-icon-viewlist tainacan-icon-1-25em"></i></span>',
-			'dynamic_metadata' => true,
+			'dynamic_metadata' => false,//true,
 			'template' => TAINACAN_BRENNAND_PLUGIN_DIR_PATH . '/tainacan/view-mode-tainacan-brennand-list.php'
 		));
 

@@ -58,6 +58,7 @@
 .tainacan-modal #filters-modal .modal-content,
 .theme-items-list #filters-modal .modal-content {
   padding: 0 var(--tainacan-one-column, 2rem) !important;
+  text-transform: lowercase;
 }
 
 @media screen and (max-width: 768px) {
@@ -73,7 +74,31 @@
 
 .tainacan-modal .icon,
 .theme-items-list .icon {
-  width: 2rem;
+  width: 1.875rem;
+}
+
+.theme-items-list .search-control .search-control-item {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.theme-items-list .search-control .search-control-item:not(.search-control-item--search) {
+  font-size: 0.875em;
+  padding-left: 1.75rem !important;
+  padding-right: 1.125rem !important;
+  margin-bottom: 0.25rem;
+}
+
+.theme-items-list .search-control .search-control-item.search-control-item--search::after {
+  content: "Filtros";
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1.75rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .tainacan-modal .search-area input.input[type="search"]:not(.is-danger),
@@ -88,6 +113,8 @@
 .theme-items-list .search-area input.input[type="search"]:not(.is-danger):focus-within {
   border-width: 4px !important;
   border-color: initial !important;
+  padding-top: 0.45em !important;
+  padding-bottom: 0.45em !important;
 }
 
 .tainacan-modal .b-checkbox.checkbox input[type="checkbox"] + .check,
@@ -106,6 +133,11 @@
 .theme-items-list .tainacan-icon-arrowright::before {
   content: "next" !important;
   font-size: 1.5rem !important;
+}
+
+.tainacan-modal .dropdown .dropdown-menu .dropdown-content,
+.theme-items-list .dropdown .dropdown-menu .dropdown-content {
+  padding-bottom: 0px !important;
 }
 
 .tainacan-modal .dropdown .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header),
@@ -155,6 +187,26 @@
 .theme-items-list .tainacan-icon-arrowdown::before {
   content: "next";
   rotate: 90deg;
+  font-size: 1.5rem !important;
+  margin-top: -5px;
+}
+
+.tainacan-modal .filter-tags-list,
+.theme-items-list .filter-tags-list  {
+  display: block !important;
+  padding-left: 0px !important;
+  padding-top: 1.75rem !important;
+  padding-right: 0px !important;
+}
+
+.tainacan-modal .filter-tags-list .filter-tags-info,
+.theme-items-list .filter-tags-list .filter-tags-info {
+  display: block !important;
+  margin-bottom: 1rem;
+}
+
+.theme-items-list .filter-tags-list .filter-tags-info a {
+  text-decoration: underline;
 }
 
 .tainacan-modal .filter-tags-list .swiper ul.swiper-wrapper,
@@ -162,10 +214,56 @@
   padding-bottom: 2px;
 }
 
+.tainacan-modal .filter-tags-list .filter-tag .filter-tag-metadatum-name,
+.theme-items-list .filter-tags-list .filter-tag .filter-tag-metadatum-name {
+  display: none;
+}
+
 .tainacan-modal .filter-tags-list .filter-tag,
 .theme-items-list .filter-tags-list .filter-tag {
   border-radius: 0px !important;
   border-width: 2px !important;
+  margin-right: 1.5rem !important
+}
+
+.tainacan-modal .filter-tags-list .filter-tag:not(.is-readonly),
+.theme-items-list .filter-tags-list .filter-tag:not(.is-readonly) {
+  padding-left: 2rem !important;
+}
+
+.tainacan-modal .filter-tags-list .filter-tag.is-readonly,
+.theme-items-list .filter-tags-list .filter-tag.is-readonly {
+  display: none;
+  visibility: hidden;
+}
+
+.tainacan-modal .filter-tags-list .filter-tag .filter-tag-metadatum-value,
+.theme-items-list .filter-tags-list .filter-tag .filter-tag-metadatum-value {
+  font-weight: bold !important;
+  font-size: 1.375rem !important;
+}
+
+.tainacan-modal .filter-tags-list .filter-tag .is-delete,
+.theme-items-list .filter-tags-list .filter-tag .is-delete {
+  border-radius: 0px !important;
+  left: 0px;
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.tainacan-modal .filter-tags-list .filter-tag .is-delete:hover,
+.theme-items-list .filter-tags-list .filter-tag .is-delete:hover {
+  background-color: var(--tainacan-background-color);
+}
+
+.tainacan-modal .filter-tags-list .filter-tag .is-delete::before,
+.theme-items-list .filter-tags-list .filter-tag .is-delete::before {
+  height: 2px !important;
+}
+
+.tainacan-modal .filter-tags-list .filter-tag .is-delete::after,
+.theme-items-list .filter-tags-list .filter-tag .is-delete::after {
+  width: 2px !important;
 }
 
 .filter-tags-list .swiper .swiper-button-next,
@@ -207,13 +305,38 @@
 .theme-items-list #filters-items-list button.collapse-all,
 .theme-items-list #filters-items-list .collection-name,
 .theme-items-list #filters-items-list hr,
+.theme-items-list #filters-items-list br, 
 .theme-items-list .search-control .gray-icon:empty {
   display: none;
   visibility: hidden;
 }
 
+.theme-items-list #filters-items-list #filters-label-landmark {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
 .theme-items-list #filters-items-list .checkbox {
   font-size: 0.75em !important;
+}
+
+.tainacan-modal #filters-items-list .collapse-content,
+.theme-items-list #filters-items-list .collapse-content {
+  padding-left: 2.25rem;
+  margin-top: 0px;
+}
+
+.theme-items-list #filters-items-list .filter-item-forms:not(:last-child) {
+  margin-bottom: 0px !important;
 }
 
 /* Checkobxes have special style */
@@ -280,11 +403,24 @@
   color: var(--tainacan-secondary) !important;
 }
 
+.filter-tags-list+#items-list-results {
+  padding-top: 0rem;
+}
+
+#items-list-results {
+  padding-top: 4.5rem;
+}
+
 .theme-items-list .pagination-area {
   margin: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
   border-top: 5px solid var(--tainacan-secondary) !important;
+}
+
+.theme-items-list .pagination-area .shown-items {
+  font-weight: bold;
+  text-transform: lowercase;
 }
 
 /* Single Items page */
@@ -313,6 +449,10 @@
 
 .tainacan-items-single-page section:not(:last-child) {
   border-bottom: 5px solid var(--section-color, #AF3C20);
+}
+
+.tainacan-items-single-page section a {
+  text-decoration: underline;
 }
 
 /* Seção principal do Acervo online */
@@ -964,6 +1104,14 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mr-\[4px\] {
+  margin-right: 4px;
+}
+
+.mt-\[2px\] {
+  margin-top: 2px;
+}
+
 .mt-0\.5 {
   margin-top: 0.125rem;
 }
@@ -1012,6 +1160,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1042,6 +1194,10 @@ video {
 
 .h-12 {
   height: 3rem;
+}
+
+.max-h-\[68vh\] {
+  max-height: 68vh;
 }
 
 .w-\[10px\] {
@@ -1117,6 +1273,10 @@ video {
   align-self: flex-start;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1168,9 +1328,9 @@ video {
   padding: 0.75rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .px-5 {
@@ -1351,6 +1511,7 @@ video {
 :root {
   --tainacan-block-primary: #AF3C20;
   --tainacan-block-secondary: #dddad3;
+  --tainacan-background-color: #dddad3;
   --tainacan-lightbox-text-color: #AF3C20;
   --tainacan-lightbox-background: #dddad3;
 }

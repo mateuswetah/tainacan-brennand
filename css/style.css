@@ -35,6 +35,7 @@
 :root {
    --tainacan-block-primary: #AF3C20;
    --tainacan-block-secondary: #dddad3;
+   --tainacan-background-color: #dddad3;
    --tainacan-lightbox-text-color: #AF3C20;
    --tainacan-lightbox-background: #dddad3;
 }

@@ -35,7 +35,7 @@ if ( !function_exists('tainacan_brennand_get_adjacent_item_links') ) {
 						class="inline-flex items-center gap-1"
 						itemprop="url"		
 						href="'. $previous_link_url . '">
-					<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="rotate-180	inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
+					<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="mr-[4px] mt-[2px] rotate-180	inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
 						<g id="Grupo_92" data-name="Grupo 92" transform="translate(19.11 33.031) rotate(180)">
 							<g id="Grupo_89" data-name="Grupo 89" transform="translate(0 0)">
 								<path id="Caminho_91" data-name="Caminho 91" d="M16.1,0,0,16.6,16.147,33.031,19.1,30.015,5.961,16.6,19.11,3.014Z" transform="translate(0)"></path>
@@ -51,7 +51,7 @@ if ( !function_exists('tainacan_brennand_get_adjacent_item_links') ) {
 					itemprop="url"		
 					href="'. $next_link_url . '">
 				<span>' . __('Próximo resultado', 'tainacan-brennand') . '</span>
-				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
+				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="mr-[4px] mt-[2px] inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
 					<g id="Grupo_92" data-name="Grupo 92" transform="translate(19.11 33.031) rotate(180)">
 						<g id="Grupo_89" data-name="Grupo 89" transform="translate(0 0)">
 							<path id="Caminho_91" data-name="Caminho 91" d="M16.1,0,0,16.6,16.147,33.031,19.1,30.015,5.961,16.6,19.11,3.014Z" transform="translate(0)"></path>
@@ -87,7 +87,7 @@ if ( !function_exists('tainacan_brennand_item_navigation') ) {
 					class="inline-flex items-center gap-1 m-l-auto"	
 					itemprop="url"		
 					href="<?php echo tainacan_get_source_item_list_url_brennand(); ?>">
-				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="rotate-180	inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
+				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="33.031" viewBox="0 0 19.11 33.031" class="mr-[4px] mt-[2px] rotate-180 inline-block injected-svg w-[10px] h-auto fill-[var(--section-color)]">
 					<g id="Grupo_92" data-name="Grupo 92" transform="translate(19.11 33.031) rotate(180)">
 						<g id="Grupo_89" data-name="Grupo 89" transform="translate(0 0)">
 							<path id="Caminho_91" data-name="Caminho 91" d="M16.1,0,0,16.6,16.147,33.031,19.1,30.015,5.961,16.6,19.11,3.014Z" transform="translate(0)"></path>
@@ -155,4 +155,23 @@ if ( !function_exists('tainacan_brennand_get_related_items') ) {
 		);
 		return new WP_Query( $args );
 	}
+}
+
+
+/**
+ * Retrieves the "Acervo" page to be used on the breadcrumbs
+ */
+function tainacan_brennand_get_acervo_page() {
+	$pages = get_pages(array(
+		'meta_key' => '_wp_page_template',
+		'meta_value' => 'collection.blade.php',
+		'post_status' =>['publish', 'private'],
+		'hierarchical' => false,
+	));
+	
+	$acervo_page = false;
+	if ( count($pages) > 0 && !empty($pages[0]) )
+		$acervo_page = $pages[0];
+
+	return $acervo_page;
 }

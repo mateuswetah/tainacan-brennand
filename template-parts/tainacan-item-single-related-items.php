@@ -20,7 +20,7 @@ if ( $terms && is_array($terms) )
 if ( $related_items_query && $related_items_query->have_posts() ): ?>
 <div class="w-full text-[var(--section-color)]">
     <section class="tainacan-item-section tainacan-item-section--items-related-to-this">
-        <h2 class="font-bold uppercase ob-text-5" id="tainacan-item-items-related-to-this-label">
+        <h2 class="mt-2 font-bold uppercase ob-text-5" id="tainacan-item-items-related-to-this-label">
             <?php echo _e('Veja também', 'tainacan-brennand') ?>
         </h2>
         <ul class="grid list-none mx-0 my-5">

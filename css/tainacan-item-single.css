@@ -22,6 +22,10 @@
 .tainacan-items-single-page section:not(:last-child) {
     border-bottom: 5px solid var(--section-color, #AF3C20);
 }
+.tainacan-items-single-page section a {
+    text-decoration: underline;
+}
+
 
 /* Seção principal do Acervo online */
 .tainacan-items-single-page section.metadata-section-slug-default_section {

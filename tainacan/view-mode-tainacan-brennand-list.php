@@ -4,7 +4,7 @@
 
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); $item = tainacan_get_item(); ?>
 			
-			<li class="py-12 px-5 md:px-0 flex flex-col md:flex-row border-t-[5px] border-ob--ob-red text-[var(--section-color)] w-full">
+			<li class="py-8 px-5 md:px-0 flex flex-col md:flex-row border-t-[5px] border-ob--ob-red text-[var(--section-color)] w-full">
 				<?php if ( has_post_thumbnail() ) : ?>
 					<div class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 mb-4 md:mb-0">
 						<?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'w-full h-auto wp-post-image'] ); ?>
