@@ -130,3 +130,29 @@ function tainacan_get_source_item_list_url_brennand() {
 		return tainacan_the_collection_url() . '?' . http_build_query(array_merge($args));
 	}
 }
+
+/**
+ * Outputs Tainacan realted items for the single item page.
+ */
+if ( !function_exists('tainacan_brennand_get_related_items') ) {
+	function tainacan_brennand_get_related_items($terms, $item) {
+		if ($terms[0] && $terms[0] instanceof \Tainacan\Entities\Term)
+			$taxonomy = $terms[0]->get_taxonomy();
+		else
+			return false;
+
+		$args = array(
+			'post_type' => 'tnc_col_' . $item->get_collection_id() . '_item',
+			'post__not_in' => [ $item->get_id() ],
+			'posts_per_page' => 5,
+			'tax_query' => array(
+				array(
+					'taxonomy' => $taxonomy,
+					'field'    => 'term_id',
+					'terms'    => array_map(function($term) { return $term->get_id(); }, $terms),
+				),
+			),
+		);
+		return new WP_Query( $args );
+	}
+}

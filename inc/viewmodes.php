@@ -23,7 +23,7 @@ function tainacan_brennand_register_tainacan_view_modes() {
 		tainacan_register_view_mode('brennandgrid', array(
 			'label' => __( 'Cartões', 'tainacan-brennand' ),
 			'description' => __( 'Uma grade de itens feita para o Acervo Brennand', 'tainacan-brennand' ),
-			'icon' => '<span class="icon"><i class="tainacan-icon tainacan-icon-viewcards tainacan-icon-1-25em"></i></span>',
+			// 'icon' => '<span class="icon"><i class="tainacan-icon tainacan-icon-viewcards tainacan-icon-1-25em"></i></span>',
 			'dynamic_metadata' => false,
 			'template' => TAINACAN_BRENNAND_PLUGIN_DIR_PATH . '/tainacan/view-mode-tainacan-brennand-grid.php'
 		));
@@ -32,7 +32,7 @@ function tainacan_brennand_register_tainacan_view_modes() {
 		tainacan_register_view_mode('brennandlist', array(
 			'label' => __( 'Lista', 'tainacan-brennand' ),
 			'description' => __( 'Uma lista de itens feita para o Acervo Brennand', 'tainacan-brennand' ),
-			'icon' => '<span class="icon"><i class="tainacan-icon tainacan-icon-viewlist tainacan-icon-1-25em"></i></span>',
+			// 'icon' => '<span class="icon"><i class="tainacan-icon tainacan-icon-viewlist tainacan-icon-1-25em"></i></span>',
 			'dynamic_metadata' => true,
 			'template' => TAINACAN_BRENNAND_PLUGIN_DIR_PATH . '/tainacan/view-mode-tainacan-brennand-list.php'
 		));

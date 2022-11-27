@@ -16,32 +16,16 @@ section class... */
 //     return $before;
 // }, 2, 10);
 
-// add_filter('tainacan-get-item-metadatum-as-html-before-title', function($metadatum_title_before, $item_metadatum) {
-    
-//     $special_sections_ids['secao-de-classificacao-do-acervo-online'] = 'default_section';
-//     $special_sections_ids['creditos'] = '312375';
-
-//     if ( $item_metadatum->get_metadatum()->get_metadata_section_id() == $special_sections_ids['secao-de-classificacao-do-acervo-online'] ) {
-//         $metadatum_title_before = str_replace('class="', 'class="invisible  ', $metadatum_title_before);
-//     }
-
-//     if ( $item_metadatum->get_metadatum()->get_metadata_section_id() == $special_sections_ids['creditos'] ) {
-//         $metadatum_title_before = str_replace('class="', 'class="lowercase inline', $metadatum_title_before);
-//     }
-
-//     return $metadatum_title_before;
-// }, 2, 10);
-
+/**
+ * Building the related items query
+ */
 ?>
 
 <div class="mt-[50px] flex flex-col xl:flex-row xl:justify-between gap-9">
 
     <div class="w-full xl:w-50% mb-10 xl:mb-0">
         <div class="w-auto sticky top-[50px]">
-            <?php
-                include(TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-attachments.php' );
-                do_action( 'tainacan-brennand-single-item-after-attachments' );
-            ?>
+            <?php include(TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-attachments.php' ); ?>
         </div>
     </div>
 
@@ -69,13 +53,9 @@ section class... */
                 <?php tainacan_brennand_item_navigation(); ?>
             </div>
         </div>    
-
-        <div class="w-full xl:w-50% text-[var(--section-color)]">
-
-            <?php include(TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-items-related-to-this.php' ); ?>
-
-        </div>
         
     </div>
 
 </div>
+
+<?php include(TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-related-items.php' ); ?>

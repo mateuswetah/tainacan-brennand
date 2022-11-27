@@ -33,6 +33,8 @@
 
 /* Tainacan Gutenberg Blocks colors */
 :root {
-   --tainacan-block-primary: #eb4200;
-   --tainacan-block-secondary: #ffefbc;
+   --tainacan-block-primary: #AF3C20;
+   --tainacan-block-secondary: #dddad3;
+   --tainacan-lightbox-text-color: #AF3C20;
+   --tainacan-lightbox-background: #dddad3;
 }

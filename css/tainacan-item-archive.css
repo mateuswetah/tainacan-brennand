@@ -22,7 +22,7 @@
     --tainacan-item-hover-background-color: rgba(209,204,189,0.9);
     --tainacan-item-heading-hover-background-color:rgba(209,204,189,0.9);
     --tainacan-skeleton-color: rgba(209,204,189,0.9);
-    --tainacan-base-font-size: 1.125em; 
+    --tainacan-base-font-size: 1em; 
     --tainacan-one-column: 2rem;
     --tainacan-container-padding: 2rem;
 }
@@ -35,6 +35,9 @@
 }
 .theme-items-list:not(.tainacan-modal) .search-control {
     grid-area: control;
+    text-transform: lowercase;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .theme-items-list:not(.tainacan-modal) .filters-menu {
     grid-area: filters;
@@ -46,7 +49,20 @@
 }
 .tainacan-modal #filters-modal .modal-content,
 .theme-items-list #filters-modal .modal-content {
-    padding: var(--tainacan-one-column, 2rem) !important;
+    padding: 0 var(--tainacan-one-column, 2rem) !important;
+}
+@media screen and (max-width: 768px) {
+    .tainacan-modal #filters-modal .modal-content,
+    .theme-items-list #filters-modal .modal-content {
+        padding: var(--tainacan-one-column, 2rem) !important;
+    }
+}
+.theme-items-list .field.has-addons {
+    align-items: center;
+}
+.tainacan-modal .icon,
+.theme-items-list .icon {
+    width: 2rem;
 }
 .tainacan-modal .search-area input.input[type="search"]:not(.is-danger),
 .tainacan-modal .search-area input.input[type="search"]:not(.is-danger):hover,
@@ -59,21 +75,36 @@
 .theme-items-list .search-area input.input[type="search"]:not(.is-danger):focus,
 .theme-items-list .search-area input.input[type="search"]:not(.is-danger):focus-within {
     border-width: 4px !important;
+    border-color: initial !important;
 }
 .tainacan-modal .b-checkbox.checkbox input[type="checkbox"] + .check,
 .theme-items-list .b-checkbox.checkbox input[type="checkbox"] + .check {
     border-radius: 0px !important;
     border-width: 2px !important;
 }
-.tainacan-modal .pagination-area .pagination .icon .mdi-chevron-left::before,
 .theme-items-list .pagination-area .pagination .icon .mdi-chevron-left::before {
     content: "previous" !important;
+    font-size: 1.5rem !important;
 }
-.tainacan-modal .pagination-area .pagination .icon .mdi-chevron-right::before,
 .theme-items-list .pagination-area .pagination .icon .mdi-chevron-right::before,
 .tainacan-modal .tainacan-icon-arrowright::before,
 .theme-items-list .tainacan-icon-arrowright::before {
     content: "next" !important;
+    font-size: 1.5rem !important;
+}
+.tainacan-modal .dropdown .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header),
+.tainacan-modal .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header),
+.tainacan-modal .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header),
+.tainacan-modal .autocomplete .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header),
+.tainacan-modal .autocomplete .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header),
+.tainacan-modal .autocomplete .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header),
+.theme-items-list .dropdown .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header),
+.theme-items-list .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header),
+.theme-items-list .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header),
+.theme-items-list .autocomplete .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header),
+.theme-items-list .autocomplete .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header),
+.theme-items-list .autocomplete .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header) {
+    font-weight: bold;
 }
 .tainacan-modal .dropdown .dropdown-menu .dropdown-content .dropdown-item:not(.dropdown-header):hover,
 .tainacan-modal .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover,
@@ -100,6 +131,7 @@
 .theme-items-list .autocomplete .dropdown .dropdown-menu .dropdown-content .has-link a:not(.dropdown-header):hover .gray-icon,
 .theme-items-list .autocomplete .dropdown .dropdown-menu .has-link .dropdown-content a:not(.dropdown-header):hover .gray-icon {
     color: var(--tainacan-background-color, #DDDAD3) !important;
+    --tainacan-info-color: var(--tainacan-background-color, #DDDAD3) !important;
 }
 .tainacan-modal .tainacan-icon-arrowdown::before,
 .theme-items-list .tainacan-icon-arrowdown::before {
@@ -115,10 +147,19 @@
     border-radius: 0px !important;
     border-width: 2px !important;
 }
+.filter-tags-list .swiper .swiper-button-next,
+.filter-tags-list .swiper .swiper-button-prev {
+    top: 1.5rem !important;
+}
 .tainacan-modal .control.has-icons-right .icon .mdi-magnify::before,
 .theme-items-list .control.has-icons-right .icon .mdi-magnify::before {
     color: var(--tainacan-secondary, #AF3C20) !important;
-    font-size: 1.5rem !important;
+    font-size: 1.875rem !important;
+    transform: rotate(90deg);
+}
+.tainacan-modal .search-control .dropdown-trigger .icon, 
+.theme-items-list .search-control .dropdown-trigger .icon {
+    font-size: 0.6875em;
 }
 .theme-items-list .label,
 .tainacan-modal .label,
@@ -137,4 +178,79 @@
 .theme-items-list .pagination-link,
 .tainacan-modal .pagination-link {
     font-weight: bold !important;
+}
+
+.theme-items-list #filters-items-list button.collapse-all,
+.theme-items-list #filters-items-list .collection-name,
+.theme-items-list #filters-items-list hr,
+.theme-items-list .search-control .gray-icon:empty {
+    display: none;
+    visibility: hidden;
+} 
+
+.theme-items-list #filters-items-list .checkbox {
+    font-size: 0.75em !important;
+}
+
+
+/* Checkobxes have special style */
+.theme-items-list .search-control .b-checkbox.checkbox {
+	display: flex;
+}
+.tainacan-modal .tainacan-form input[type="checkbox"]:checked + span + .control-label,
+.theme-items-list input[type="checkbox"]:checked + span + .control-label,
+.tainacan-modal .tainacan-form input[type="checkbox"]:checked + span + .control-label .checkbox-label-text,
+.theme-items-list input[type="checkbox"]:checked + span + .control-label .checkbox-label-text {
+	--tainacan-input-color: var(--tainacan-secondary);
+	color: var(--tainacan-secondary);
+}
+.tainacan-modal .tainacan-form .b-checkbox.checkbox input[type="checkbox"]:checked + .check,
+.theme-items-list .field .b-checkbox.checkbox input[type="checkbox"]:checked + .check,
+.tainacan-modal .tainacan-form .control .b-checkbox.checkbox input[type="checkbox"]:checked + .check,
+.theme-items-list .control .b-checkbox.checkbox input[type="checkbox"]:checked + .check {
+	background-image: url('../images/icons/ICONES_checkbox.svg') !important;
+	background-color: transparent !important;
+	background-repeat: no-repeat !important;
+	background-size: 16px 16px !important;
+	width: 16px;
+	height: 16px;
+	border: none;
+}
+.tainacan-modal .tainacan-form .b-checkbox.checkbox input[type="checkbox"] + .check,
+.theme-items-list .field .b-checkbox.checkbox input[type="checkbox"] + .check,
+.tainacan-modal .tainacan-form .control .b-checkbox.checkbox input[type="checkbox"] + .check,
+.theme-items-list .control .b-checkbox.checkbox input[type="checkbox"] + .check {
+	width: 16px;
+	height: 16px;
+	border-radius: 3px;
+	margin-top: -1px;
+}
+.tainacan-modal .tainacan-form .b-checkbox.checkbox input[type="checkbox"] + span + .control-label,
+.theme-items-list .field .b-checkbox.checkbox input[type="checkbox"] + span + .control-label,
+.tainacan-modal .tainacan-form .control .b-checkbox.checkbox input[type="checkbox"] + span + .control-label,
+.theme-items-list .control .b-checkbox.checkbox input[type="checkbox"] + span + .control-label,
+.tainacan-modal .tainacan-form .checkbox-label-text,
+.theme-items-list .checkbox-label-text {
+	line-height: 1.875em !important;
+}
+.tainacan-modal .tainacan-form .b-checkbox.checkbox input[type="checkbox"]:checked + .check::after,
+.theme-items-list .b-checkbox.checkbox input[type="checkbox"]:checked + .check::after {
+	display: none;
+}
+.tainacan-modal .tainacan-form .b-checkbox.checkbox input[type="checkbox"]:checked + .check::before,
+.theme-items-list .b-checkbox.checkbox input[type="checkbox"]:checked + .check::before {
+	display: none;
+}
+.tainacan-modal .tainacan-form .tainacan-modal-checkbox-list-body .b-checkbox.checkbox {
+	font-size: 1rem !important;
+}
+.tainacan-modal .tainacan-form .tainacan-modal-checkbox-list-body .b-checkbox.checkbox input[type="checkbox"]:checked + .check {
+	color: var(--tainacan-secondary) !important;
+}
+
+.theme-items-list .pagination-area {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-top: 5px solid var(--tainacan-secondary) !important;
 }

@@ -80,3 +80,9 @@
 .tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online .tainacan-metadata-value {
     font-weight: bold;
 }
+
+/* Overrides some of .grid masonry forced styles */
+.tainacan-item-section--items-related-to-this ul.grid {
+    margin-top: 1.25rem;
+    margin-left: 0px;
+}
