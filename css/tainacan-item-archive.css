@@ -8,9 +8,11 @@
     --tainacan-primary: rgba(209,204,189,0.9);
     --tainacan-black: var(--tainacan-secondary, #AF3C20);
     --tainacan-white: var(--tainacan-background-color, #DDDAD3);
-   /* --tainacan-yellow1: #ffefbc;
-    --tainacan-warning: #ffefbc;
-    --tainacan-success: #3c5102; */
+    --tainacan-yellow1:  var(--tainacan-background-color, #DDDAD3);
+    --tainacan-yellow2: var(--tainacan-secondary, #AF3C20);
+    --tainacan-warning:  var(--tainacan-background-color, #DDDAD3);
+    --tainacan-success: var(--tainacan-secondary, #AF3C20);
+    --tainacan-gray1: var(--tainacan-background-color, #DDDAD3);
     --tainacan-gray4: var(--tainacan-secondary, #AF3C20);
     --tainacan-gray5: var(--tainacan-secondary, #AF3C20);
     --tainacan-label-color: var(--tainacan-secondary, #AF3C20);
@@ -26,6 +28,18 @@
     --tainacan-one-column: 2rem;
     --tainacan-container-padding: 2rem;
     --tainacan-filter-menu-width-theme: 368px;
+}
+.tainacan-tooltip {
+    --tainacan-base-font-size: 1.5em;
+    font-size: 1.5em !important;
+    font-weight: bold;
+}
+.tainacan-modal {
+    --tainacan-base-font-size: 1.5em;
+    font-weight: bold;
+}
+.tainacan-modal.filters-menu {
+    --tainacan-base-font-size: 1.0em;
 }
 .theme-items-list:not(.tainacan-modal) {
     display: grid;
@@ -59,6 +73,7 @@
     grid-area: control;
     text-transform: lowercase;
     padding-top: 0px;
+    padding-left: 0;
     padding-bottom: 0px;
 }
 .theme-items-list:not(.tainacan-modal) .filters-menu {
@@ -96,8 +111,12 @@
 .theme-items-list .search-control .search-control-item:not(.search-control-item--search) {
     font-size: 0.875em;
     padding-left: 1.75rem !important;
-    padding-right: 1.125rem !important;
+    padding-right: 0rem !important;
     margin-bottom: 0.25rem;
+    max-width: 100%;
+}
+.theme-items-list .search-control .search-control-item.search-control-item--search {
+    width: 100%;
 }
 .theme-items-list .search-control .search-control-item.search-control-item--search::after {
     content: "Filtros";
@@ -108,20 +127,27 @@
     font-weight: bold;
     text-transform: capitalize;
 }
-.tainacan-modal .search-area input.input[type="search"]:not(.is-danger),
-.tainacan-modal .search-area input.input[type="search"]:not(.is-danger):hover,
-.tainacan-modal .search-area input.input[type="search"]:not(.is-danger):active,
-.tainacan-modal .search-area input.input[type="search"]:not(.is-danger):focus,
-.tainacan-modal .search-area input.input[type="search"]:not(.is-danger):focus-within,
-.theme-items-list .search-area input.input[type="search"]:not(.is-danger),
-.theme-items-list .search-area input.input[type="search"]:not(.is-danger):hover,
-.theme-items-list .search-area input.input[type="search"]:not(.is-danger):active,
-.theme-items-list .search-area input.input[type="search"]:not(.is-danger):focus,
-.theme-items-list .search-area input.input[type="search"]:not(.is-danger):focus-within {
-    border-width: 4px !important;
-    border-color: initial !important;
+.tainacan-modal .search-area,
+.theme-items-list .search-area {
+    min-width: 100% !important;
+}
+.tainacan-modal .search-area input.input,
+.theme-items-list .search-area input.input {
     padding-top: 0.45em !important;
     padding-bottom: 0.45em !important;
+}
+.tainacan-modal input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger),
+.tainacan-modal input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger):hover,
+.tainacan-modal input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger):active,
+.tainacan-modal input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger):focus,
+.tainacan-modal input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger):focus-within,
+.theme-items-list input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger),
+.theme-items-list input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger):hover,
+.theme-items-list input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger):active,
+.theme-items-list input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger):focus,
+.theme-items-list input.input:not([type="checkbox"]):not([type="radio"]):not(.is-danger):focus-within {
+    border-width: 4px !important;
+    border-color: initial !important;
 }
 .tainacan-modal .b-checkbox.checkbox input[type="checkbox"] + .check,
 .theme-items-list .b-checkbox.checkbox input[type="checkbox"] + .check {
@@ -195,13 +221,14 @@
     padding-top: 2rem !important;
     display: block !important;
     padding-left: 0px !important;
-    padding-top: 1.75rem !important;
+    padding-top: 1.35rem !important;
     padding-right: 0px !important;
+    padding-bottom: 1.2rem !important;
 }
 .tainacan-modal .filter-tags-list .filter-tags-info,
 .theme-items-list .filter-tags-list .filter-tags-info {
     display: block !important;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
 }
 .theme-items-list .filter-tags-list .filter-tags-info a {
     text-decoration: underline;
@@ -267,6 +294,12 @@
 .theme-items-list .search-control .dropdown-trigger .icon {
     font-size: 0.6875em;
 }
+.tainacan-modal .search-control .dropdown-trigger .button span:not(.icon), 
+.theme-items-list .search-control .dropdown-trigger .button span:not(.icon) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 1rem);
+}
 .theme-items-list .label,
 .tainacan-modal .label,
 .theme-items-list .input,
@@ -283,6 +316,7 @@
 .tainacan-modal .checkbox-label-text,
 .theme-items-list .pagination-link,
 .tainacan-modal .pagination-link {
+    border-radius: 0px !important;
     font-weight: bold !important;
 }
 
@@ -378,7 +412,7 @@
     padding-top: 0rem;
 }
 .theme-items-list #items-list-results {
-    padding-top: 4.5rem;
+    padding-top: 4.25rem;
 }
 
 .theme-items-list .pagination-area {
@@ -395,4 +429,19 @@
 .tainacan-photoswipe-layer {
     --pswp-icon-color-secondary: var(--tainacan-background-color, #dddad3);
     --pswp-icon-stroke-color: var(--tainacan-background-color, #dddad3);
+}
+.tainacan-modal .modal-card {
+    border-radius: 0px !important;
+}
+.tainacan-modal .modal-card .alert-dialog-title {
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+}
+.theme-items-list .has-text-warning {
+    color: var(--tainacan-secondary) !important
+}
+.theme-items-list .metadata-alert {
+    margin-left: 0;
+    margin-right: 0;
+
 }
