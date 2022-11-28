@@ -509,8 +509,7 @@
 }
 
 .theme-items-list .metadata-alert {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0px !important;
 }
 
 /* Single Items page */
