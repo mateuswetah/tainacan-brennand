@@ -1,9 +1,9 @@
 <?php if ( have_posts() ) : ?>
-	<ul class="tainacan-brennand-grid-container modular-grid grid">
-		<li class="grid-sizer"></li>
+	<ul class="tainacan-brennand-grid-container modular-grid">
+		<li class="modular-grid-sizer"></li>
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); $item = tainacan_get_item(); ?>
 			
-			<li class="tainacan-brennand-grid-item grid-item group border-4 border-ob-red p-3.5 text-center">
+			<li class="tainacan-brennand-grid-item modular-grid-item group border-4 border-ob-red p-3.5 text-center">
 				<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="tainacan-brennand-grid-item-thumbnail">

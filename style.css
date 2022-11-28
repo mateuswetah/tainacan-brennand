@@ -28,13 +28,14 @@
   --tainacan-base-font-size: 1em;
   --tainacan-one-column: 2rem;
   --tainacan-container-padding: 2rem;
+  --tainacan-filter-menu-width-theme: 368px;
 }
 
 .theme-items-list:not(.tainacan-modal) {
   display: grid;
   grid-template-areas: 'control items' 'filters items';
   grid-template-rows: auto;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 368px calc(100% - 368px);
   grid-auto-rows: min-content;
 }
 
@@ -1206,10 +1207,6 @@ video {
 
 .inline-flex {
   display: inline-flex;
-}
-
-.grid {
-  display: grid;
 }
 
 .hidden {
