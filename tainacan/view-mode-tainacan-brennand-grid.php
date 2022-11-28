@@ -2,21 +2,21 @@
 	<ul class="tainacan-brennand-grid-container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-9 mb-9 ml-0 mt-0">
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); $item = tainacan_get_item(); ?>
 			
-			<li class="tainacan-brennand-grid-item group border-4 border-ob-red p-3.5 text-center">
+			<li class="flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-4 border-ob-red p-3.5 text-center">
 				<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="tainacan-brennand-grid-item-thumbnail">
-							<?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'mx-auto attachment-tainacan-medium-full size-tainacan-medium-full'] ); ?>
+							<?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'text-lg truncate mx-auto attachment-tainacan-medium-full size-tainacan-medium-full'] ); ?>
 							<div class="skeleton"></div> 
 						</div>
 					<?php else : ?>
 						<div class="tainacan-brennand-grid-item-thumbnail">
-							<?php echo '<img class="mx-auto" alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
+							<?php echo '<img class="mx-auto truncate text-lg" alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
 							<div class="skeleton"></div> 
 						</div>
 					<?php endif; ?>
 
-					<div class="metadata-title text-3xl font-bold">
+					<div class="grid metadata-title text-3xl font-bold">
 						<h3 class="truncate">
 							<?php 
 								the_title();
@@ -48,7 +48,7 @@
 							}
 						}
 						if ($category)
-							echo '<div class="metadata-description text-xl">' . $category . '</div>';
+							echo '<div class="grid metadata-description text-xl">' . $category . '</div>';
 					?>
 				</a>
 			</li>	

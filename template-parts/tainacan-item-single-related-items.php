@@ -25,7 +25,7 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
         </h2>
         <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-9 list-none mx-0 my-5">
         <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); ?>
-            <li class="group px-3.5 py-6 border-3 lg:border-4 border-ob-red text-center">
+            <li class="aspect-square group px-3.5 py-6 border-3 lg:border-4 border-ob-red text-center">
                 <a class="w-full aspect-square" href="<?php echo get_permalink(); ?>">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="tainacan-brennand-grid-item-thumbnail">
