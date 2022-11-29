@@ -15,15 +15,15 @@
 }
 
 /* Custom css for some of the Tainacan Single item Section */
-.tainacan-items-single-page section {    
+.tainacan-items-single-page section:not(.tainacan-item-section--gallery) {    
     padding-top: 1.5rem;
     padding-bottom: 1.0rem;
 }
-.tainacan-items-single-page section:not(:last-child) {
+.tainacan-items-single-page section:not(:last-of-type) {
     border-bottom: 3px solid var(--section-color, #AF3C20);
 }
 @media screen and (min-width: 1024px) {
-    .tainacan-items-single-page section:not(:last-child) {
+    .tainacan-items-single-page section:not(:last-of-type) {
         border-bottom: 5px solid var(--section-color, #AF3C20);
     }
 }
@@ -79,8 +79,6 @@
 /* Seção de descrição do Acervo online */
 .tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online {
     font-size: 1.375rem; /* 22px */
-    max-height: 100%;
-    overflow-y: auto;
 }
 .tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online .tainacan-metadata-label {
     font-weight: normal;
@@ -90,8 +88,55 @@
     font-weight: bold;
 }
 
+/* These two metadata in particular should be displayed together */
+.tainacan-items-single-page .metadata-slug-categoria,
+.tainacan-items-single-page .metadata-slug-tecnica-4 {
+    display: inline-block;
+}
+.tainacan-items-single-page .metadata-slug-categoria+.metadata-slug-tecnica-4 {
+    margin-left: 1rem;
+}
+.tainacan-items-single-page .metadata-slug-categoria+.metadata-slug-tecnica-4 .tainacan-metadata-value::before {
+    content: ",";
+    display: block;
+    margin-left: -0.875rem;
+    position: absolute;
+}
+
+/* This metadata in particular must be public but not visible in the item page */
+.tainacan-items-single-page .metadata-slug-decada {
+    display: none;
+    visibility: hidden;
+}
+
 /* Overrides some of .grid masonry forced styles */
 .tainacan-item-section--items-related-to-this ul.grid {
     margin-top: 1.25rem;
     margin-left: 0px;
+}
+
+/* Multivalue separator should not appear */
+.tainacan-items-single-page .multivalue-separator {
+    visibility: hidden;
+    margin: 0 0.4rem;
+}
+
+/* Media gallery zoom */
+.tainacan-photoswipe-layer {
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+.tainacan-photoswipe-layer .pswp__caption,
+.tainacan-photoswipe-layer .pswp__name,
+.tainacan-photoswipe-layer .pswp__caption-inner,
+.tainacan-photoswipe-layer .pswp__counter    {
+    text-shadow: none !important;
+}
+.tainacan-photoswipe-layer .pswp__counter {
+    display: block;
+    font-size: 1.5rem;
+}
+.tainacan-photoswipe-layer .pswp__caption-inner,
+.tainacan-photoswipe-layer.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
+    box-shadow: 0 0 35px -18px black;
 }

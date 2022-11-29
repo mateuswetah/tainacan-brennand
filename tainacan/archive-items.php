@@ -49,6 +49,8 @@
 	$page_title = '<h1 class="m0 pt-2 pb-4 font-bold ob-text-5 uppercase">' . __('Busca no Acervo', 'tainacan-brennand') . '</h1>';
 	echo '<script type="text/javascript">
 		wp.hooks.addFilter("tainacan_faceted_search_search_control_before", "tainacan-hooks", function() { return `' . $page_title . '`; });
+		wp.hooks.addFilter("tainacan_faceted_search_search_control_wrapper_before", "tainacan-hooks", function() { return `<div class="tainacan-brennand-sidebar">`; });
+		wp.hooks.addFilter("tainacan_faceted_search_filters_wrapper_after", "tainacan-hooks", function() { return `</div>`; });
 	</script>';
 ?>
 

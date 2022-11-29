@@ -2,7 +2,7 @@
 	<ul class="tainacan-brennand-grid-container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-9 mb-9 ml-0 mt-0">
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); $item = tainacan_get_item(); ?>
 			
-			<li class="flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-4 border-ob-red p-3.5 text-center">
+			<li class="flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-4 border-ob-red p-3.5 text-center">
 				<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="tainacan-brennand-grid-item-thumbnail">

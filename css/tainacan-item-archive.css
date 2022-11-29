@@ -76,25 +76,13 @@
         padding-right: 0px;
     }
 }
-@media screen and (min-width: 1025px) {
-    /* .theme-items-list:not(.tainacan-modal) .search-control {
-        position: sticky;
-        top: 0px;
-        z-index: 91;
-    } */
-    .theme-items-list:not(.tainacan-modal) .filters-menu {
-        /* position: sticky;
-        top: 368px !important; */
-        height: auto;
-        min-height: unset;
-    }
-}
 .theme-items-list:not(.tainacan-modal) .search-control {
     grid-area: control;
     text-transform: lowercase;
     padding-top: 0px;
     padding-left: 0;
     padding-bottom: 0px;
+    max-width: var(--tainacan-filter-menu-width-theme);
     background-color: var(--tainacan-background-color, #DDDAD3);
 }
 .theme-items-list:not(.tainacan-modal) .filters-menu {
@@ -107,7 +95,7 @@
 }
 .tainacan-modal #filters-modal .modal-content,
 .theme-items-list #filters-modal .modal-content {
-    padding: 0 var(--tainacan-one-column, 2rem) !important;
+    padding: 0 var(--tainacan-one-column, 2rem) 0 0 !important;
     text-transform: lowercase;
 }
 .theme-items-list .field.has-addons {
@@ -125,7 +113,7 @@
 }
 .theme-items-list .search-control .search-control-item:not(.search-control-item--search) {
     font-size: 0.875em;
-    padding-left: 1.75rem !important;
+    padding-left: 0rem !important;
     padding-right: 0rem !important;
     margin-bottom: 0.25rem;
     max-width: 100%;
@@ -151,7 +139,7 @@
     content: "Filtros";
     display: block;
     margin-top: 1rem;
-    margin-left: 1.75rem;
+    margin-left: 0rem;
     font-size: 1.875rem;
     font-weight: bold;
     text-transform: capitalize;
@@ -178,6 +166,7 @@
     border-width: 4px !important;
     border-color: initial !important;
 }
+
 .tainacan-modal .b-checkbox.checkbox input[type="checkbox"] + .check,
 .theme-items-list .b-checkbox.checkbox input[type="checkbox"] + .check {
     border-radius: 0px !important;
@@ -323,6 +312,12 @@
 .theme-items-list .search-control .dropdown-trigger .icon {
     font-size: 0.6875em;
 }
+
+.tainacan-modal .search-control #tainacanSortByDropdown .dropdown-trigger .button.is-white, 
+.theme-items-list .search-control #tainacanSortByDropdown .dropdown-trigger .button.is-white {
+    max-width: 216px;
+}
+
 .tainacan-modal .search-control .dropdown-trigger .button span:not(.icon), 
 .theme-items-list .search-control .dropdown-trigger .button span:not(.icon) {
     overflow: hidden;
@@ -376,7 +371,7 @@
 .tainacan-modal #filters-items-list .collapse-content,
 .theme-items-list #filters-items-list .collapse-content {
     padding-left: 2.25rem;
-    padding-right: 0.25rem;
+    padding-right: 0.5rem;
     margin-top: 0px;
 }
 .theme-items-list #filters-items-list .filter-item-forms:not(:last-child) {
@@ -443,9 +438,6 @@
 }
 .theme-items-list #items-list-results {
     padding-top: 4.25rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: calc(100vh - 115px);
 }
 
 .theme-items-list .pagination-area {
@@ -474,5 +466,6 @@
     color: var(--tainacan-secondary) !important
 }
 .theme-items-list .metadata-alert {
+    display: inline-flex !important;
     margin: 0px !important;
 }
