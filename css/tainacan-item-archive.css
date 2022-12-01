@@ -475,9 +475,6 @@
     margin: 0px !important;
 }
 
-.theme-items-list .faceted-search-hook-items-list-area-before {
-    border-bottom: 5px solid var(--tainacan-secondary);
-}
 .theme-items-list .tainacan-textual-search-input kbd,
 .theme-items-list .tainacan-textual-search-input kbd:hover,
 .theme-items-list .tainacan-textual-search-input kbd:focus {

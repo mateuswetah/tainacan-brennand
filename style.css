@@ -543,10 +543,6 @@
   margin: 0px !important;
 }
 
-.theme-items-list .faceted-search-hook-items-list-area-before {
-  border-bottom: 5px solid var(--tainacan-secondary);
-}
-
 .theme-items-list .tainacan-textual-search-input kbd,
 .theme-items-list .tainacan-textual-search-input kbd:hover,
 .theme-items-list .tainacan-textual-search-input kbd:focus {
@@ -1527,6 +1523,18 @@ video {
   white-space: nowrap;
 }
 
+.border-3 {
+  border-width: 3px;
+}
+
+.border-b-3 {
+  border-bottom-width: 3px;
+}
+
+.border-t-3 {
+  border-top-width: 3px;
+}
+
 .border-t-\[5px\] {
   border-top-width: 5px;
 }
@@ -1760,6 +1768,18 @@ video {
 
   .lg\:border-4 {
     border-width: 4px;
+  }
+
+  .lg\:border-5 {
+    border-width: 5px;
+  }
+
+  .lg\:border-b-5 {
+    border-bottom-width: 5px;
+  }
+
+  .lg\:border-t-5 {
+    border-top-width: 5px;
   }
 }
 
