@@ -4,22 +4,23 @@
 
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); $item = tainacan_get_item(); ?>
 			
-			<li class="py-8 px-5 md:px-0 flex flex-col md:flex-row border-t-[5px] border-ob--ob-red text-[var(--section-color)] w-full">
+			<li class="py-8 pl-0 pr-4 md:px-0 flex flex-col md:flex-row border-t-[5px] border-ob--ob-red text-[var(--section-color)] w-full">
 				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 md:mb-0">
+					<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>" class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 md:mb-0">
 						<?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'w-full h-auto wp-post-image'] ); ?>
-						<div class="skeleton"></div> 
-					</div>
+						<a class="skeleton"></a> 
+					</a>
 				<?php else : ?>
-					<div class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 md:mb-0">
+					<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>" class="md:w-1/3 max-w-[218px] md:shrink-0 md:mr-14 lg:mr-16 2xl:mr-20 md:mb-0">
 						<?php echo '<img class="w-full h-auto wp-post-image" alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
-						<div class="skeleton"></div> 
-					</div>
+						<a class="skeleton"></a> 
+					</a>
 				<?php endif; ?>
 
-				<div class="md:grow">
-					<div class="mb-8 font-kobel font-bold">
+				<div class="md:grow flex flex-col justify-between">
+					<div class="mb-8 font-kobel font-bold text-4xl">
 						<h3> 
+							<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 							<?php 
 								the_title();
 
@@ -36,10 +37,11 @@
 								if ($data)
 									echo ', ' . $data;
 							?>
+							</a>
 						</h3>
 						<span class="item-title-size"></span>
 					</div>
-					<div class="flex justify-between items-end flex-col md:flex-row">
+					<div class="flex justify-between items-end flex-col md:flex-row mt-auto">
 						<div class="max-w-[798px] font-kobel font-bold text-size">
 							<?php
 								$category_item_metadata = $item->get_metadata(array(
@@ -57,7 +59,7 @@
 							?>
 						</div>
 
-						<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>" class="text-size font-kobel font-bold self-start md:self-auto mt-4 md:mt-0">ver mais →</a>
+						<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>" class="-mb-1.5 text-3xl font-kobel font-bold self-start md:self-auto mt-4 md:mt-0">ver mais →</a>
 					</div>
 				</div>
 			</li>	

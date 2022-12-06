@@ -33,6 +33,8 @@
     --tainacan-base-font-size: 1.5em;
     font-size: 1.5em !important;
     font-weight: bold;
+    display: none;
+    visibility: hidden;
 }
 .tainacan-modal {
     --tainacan-base-font-size: 1.5em;
@@ -495,4 +497,10 @@
 .theme-items-list .tainacan-textual-search-input .dropdown-item:hover .control-label ,
 .theme-items-list .tainacan-textual-search-input .dropdown-item:hover .help {
     color: var(--tainacan-secondary) !important;
+}
+
+.tainacan-modal .filter-item-forms .collapse-trigger .collapse-label,
+.theme-items-list .filter-item-forms .collapse-trigger .collapse-label {
+    overflow-x: visible !important;
+    text-overflow: initial !important;
 }

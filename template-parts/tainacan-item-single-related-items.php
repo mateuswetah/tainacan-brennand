@@ -23,31 +23,32 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
         <h2 class="mt-2 font-bold uppercase text-[2.5rem] leading-[2.68rem]" id="tainacan-item-items-related-to-this-label">
             <?php echo _e('Veja também', 'tainacan-brennand') ?>
         </h2>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-9 list-none mx-0 my-5">
-        <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); ?>
-            <li class="flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-5 border-ob-red p-3.5 text-center">
-                <a class="w-full aspect-square" href="<?php echo get_permalink(); ?>">
-                    <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="tainacan-brennand-grid-item-thumbnail">
-                            <?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'mx-auto attachment-tainacan-medium-full size-tainacan-medium-full'] ); ?>
-                            <div class="skeleton"></div> 
-                        </div>
-                    <?php else : ?>
-                        <div class="tainacan-brennand-grid-item-thumbnail">
-                            <?php echo '<img class="mx-auto" alt="', esc_attr_e('Item sem imagem', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
-                            <div class="skeleton"></div> 
-                        </div>
-                    <?php endif; ?>
+        <ul class="modular-grid list-none mx-0 my-5">
+            <li class="modular-grid-sizer hidden md:block"></li>
+            <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); ?>
+                <li class="modular-grid-item flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-5 border-ob-red px-3.5 pt-4 pb-3 text-center">
+                    <a class="h-full flex flex-col aspect-square" href="<?php echo get_permalink(); ?>">
+                        <?php if ( has_post_thumbnail() ) : ?>
+                            <div class="tainacan-brennand-grid-item-thumbnail mt-auto mb-2 overflow-hidden">
+                                <?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'w-auto max-h-full text-lg truncate mx-auto attachment-tainacan-medium-full size-tainacan-medium-full'] ); ?>
+                                <div class="skeleton"></div> 
+                            </div>
+                        <?php else : ?>
+                            <div class="tainacan-brennand-grid-item-thumbnail mt-auto mb-2 overflow-hidden">
+                                <?php echo '<img class="w-auto max-h-full mx-auto truncate text-lg" alt="', esc_attr_e('Item sem imagem', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
+                                <div class="skeleton"></div> 
+                            </div>
+                        <?php endif; ?>
 
-                    <div class="metadata-title text-3xl font-bold">
-                        <h3 class="truncate"><?php the_title(); ?></h3>
-                    </div>
-                    <div class="metadata-description text-xl">
-                            
-                    </div>
-                </a>
-            </li>	
-        <?php endwhile; ?>
+                        <div class="grid metadata-title text-3xl font-bold mt-auto">
+                            <h3 class="truncate"><?php the_title(); ?></h3>
+                        </div>
+                        <div class="grid metadata-description text-xl">
+                                
+                        </div>
+                    </a>
+                </li>	
+            <?php endwhile; ?>
         </ul>
     </section>
 </div>

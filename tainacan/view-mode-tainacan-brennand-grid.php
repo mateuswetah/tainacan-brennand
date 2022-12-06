@@ -1,22 +1,23 @@
 <?php if ( have_posts() ) : ?>
-	<ul class="tainacan-brennand-grid-container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-9 mb-9 ml-0 mt-0">
+	<ul class="tainacan-brennand-grid-container modular-grid list-none mb-9 ml-0 mt-0">
+		<li class="modular-grid-sizer hidden md:block"></li>
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); $item = tainacan_get_item(); ?>
 			
-			<li class="flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-4 border-ob-red p-3.5 text-center">
-				<a href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
+			<li class="modular-grid-item flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-4 border-ob-red px-3.5 pt-4 pb-3 text-center">
+				<a class="h-full flex flex-col aspect-square" href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="tainacan-brennand-grid-item-thumbnail">
-							<?php the_post_thumbnail( 'tainacan-medium-full', ['class' => 'text-lg truncate mx-auto attachment-tainacan-medium-full size-tainacan-medium-full'] ); ?>
+						<div class="tainacan-brennand-grid-item-thumbnail mt-auto mb-2 overflow-hidden">
+							<?php the_post_thumbnail( 'tainacan-large-full', ['class' => 'w-auto max-h-full text-lg truncate mx-auto attachment-tainacan-large-full size-tainacan-large-full'] ); ?>
 							<div class="skeleton"></div> 
 						</div>
 					<?php else : ?>
-						<div class="tainacan-brennand-grid-item-thumbnail">
-							<?php echo '<img class="mx-auto truncate text-lg" alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
+						<div class="tainacan-brennand-grid-item-thumbnail mt-auto mb-2 overflow-hidden">
+							<?php echo '<img class="w-auto max-h-full mx-auto truncate text-lg" alt="', esc_attr_e('Minatura da imagem do item', 'tainacan-brennand'), '" src="', esc_url(get_stylesheet_directory_uri()), '/images/thumbnail_placeholder.png">'?>
 							<div class="skeleton"></div> 
 						</div>
 					<?php endif; ?>
 
-					<div class="grid metadata-title text-3xl font-bold">
+					<div class="grid metadata-title text-3xl font-bold mt-auto">
 						<h3 class="truncate">
 							<?php 
 								the_title();
