@@ -22,8 +22,8 @@ section class... */
 
     <h1 itemprop="name" class="block lg:hidden border-b-3 lg:border-b-5 border-b-[var(--section-color)] text-[55px] leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
 
-    <div class="w-full lg:w-50%">
-        <div class="w-auto lg:sticky top-[50px] lg:max-h-[68vh]">
+    <div class="w-full lg:w-50% max-h-full overflow-hidden">
+        <div class="w-auto h-full lg:sticky lg:max-h-[68vh]">
             <?php include(TAINACAN_BRENNAND_PLUGIN_DIR_PATH . 'template-parts/tainacan-item-single-attachments.php' ); ?>
         </div>
     </div>
