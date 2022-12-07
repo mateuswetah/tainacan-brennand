@@ -1276,10 +1276,6 @@ video {
   * by plugins.
   */
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -1348,14 +1344,6 @@ video {
   margin-bottom: 0px;
 }
 
-.mt-0\.5 {
-  margin-top: 0.125rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1364,8 +1352,8 @@ video {
   margin-right: 0.5rem;
 }
 
-.mt-\[50px\] {
-  margin-top: 50px;
+.mt-\[12px\] {
+  margin-top: 12px;
 }
 
 .mb-9 {
@@ -1374,6 +1362,10 @@ video {
 
 .ml-0 {
   margin-left: 0px;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 
 .mt-auto {
@@ -1456,12 +1448,12 @@ video {
   width: 10px;
 }
 
-.w-\[4px\] {
-  width: 4px;
-}
-
 .w-full {
   width: 100%;
+}
+
+.w-\[4px\] {
+  width: 4px;
 }
 
 .w-auto {
@@ -1559,10 +1551,6 @@ video {
   border-bottom-width: 3px;
 }
 
-.border-t-3 {
-  border-top-width: 3px;
-}
-
 .border-t-\[5px\] {
   border-top-width: 5px;
 }
@@ -1580,10 +1568,6 @@ video {
   border-bottom-color: var(--section-color);
 }
 
-.border-t-\[var\(--section-color\)\] {
-  border-top-color: var(--section-color);
-}
-
 .bg-\[var\(--background-color\)\] {
   background-color: var(--background-color);
 }
@@ -1598,6 +1582,16 @@ video {
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.py-0\.5 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .px-3\.5 {
@@ -1769,8 +1763,16 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:fixed {
+    position: fixed;
+  }
+
   .lg\:sticky {
     position: sticky;
+  }
+
+  .lg\:top-0 {
+    top: 0px;
   }
 
   .lg\:mx-8 {
@@ -1816,10 +1818,6 @@ video {
 
   .lg\:border-b-5 {
     border-bottom-width: 5px;
-  }
-
-  .lg\:border-t-5 {
-    border-top-width: 5px;
   }
 }
 

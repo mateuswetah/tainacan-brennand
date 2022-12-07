@@ -48,7 +48,7 @@ section class... */
                 )
             )); ?>
 
-            <div class="absolute bottom-0 flex justify-between w-full h-12 border-t-3 lg:border-t-5 border-t-[var(--section-color)] text-xl font-bold items-end gap-3 leading-[1.05] lowercase bg-[var(--background-color)]">
+            <div class="absolute bottom-0 flex justify-between w-full h-12 border-b-3 lg:border-b-5 border-b-[var(--section-color)] text-xl font-bold items-end gap-3 leading-[1.05] lowercase bg-[var(--background-color)]">
                 <?php tainacan_brennand_item_navigation(); ?>
             </div>
         </div>    
