@@ -140,3 +140,6 @@
 .tainacan-photoswipe-layer.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
     box-shadow: 0 0 35px -18px black;
 }
+.tainacan-brennand-grid-item-thumbnail {
+    max-height: calc(100% - 2.35rem - 1.75rem);
+}

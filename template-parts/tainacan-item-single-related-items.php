@@ -72,7 +72,7 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
                                 }
                             }
                             if ($category)
-                                echo '<div class="truncate metadata-description text-xl">' . $category . '</div>';
+                                echo '<div class="truncate leading-5 metadata-description text-xl">' . $category . '</div>';
                         ?>
                     </a>
                 </li>	

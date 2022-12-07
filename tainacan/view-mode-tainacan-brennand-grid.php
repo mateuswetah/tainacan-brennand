@@ -49,7 +49,7 @@
 							}
 						}
 						if ($category)
-							echo '<div class="truncate metadata-description text-xl">' . $category . '</div>';
+							echo '<div class="truncate leading-5 metadata-description text-xl">' . $category . '</div>';
 					?>
 				</a>
 			</li>	
