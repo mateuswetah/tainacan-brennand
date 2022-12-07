@@ -575,6 +575,11 @@
   text-overflow: initial !important;
 }
 
+.tainacan-modal .filter-item-forms .disabled-filter,
+.theme-items-list .filter-item-forms .disabled-filter {
+  opacity: 1.0 !important;
+}
+
 /* Single Items page */
 
 .tainacan-items-single-page {
@@ -746,6 +751,10 @@
 .tainacan-photoswipe-layer .pswp__caption-inner,
 .tainacan-photoswipe-layer.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
   box-shadow: 0 0 35px -18px black;
+}
+
+.tainacan-brennand-grid-item-thumbnail {
+  max-height: calc(100% - 2.35rem - 1.75rem);
 }
 
 /**
@@ -1700,6 +1709,10 @@ video {
 
 .leading-\[1\.05\] {
   line-height: 1.05;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
 }
 
 .text-\[var\(--section-color\)\] {

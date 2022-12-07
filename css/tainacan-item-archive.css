@@ -504,3 +504,8 @@
     overflow-x: visible !important;
     text-overflow: initial !important;
 }
+
+.tainacan-modal .filter-item-forms .disabled-filter,
+.theme-items-list .filter-item-forms .disabled-filter {
+    opacity: 1.0 !important;
+}
