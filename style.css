@@ -384,6 +384,8 @@
 .tainacan-modal .input,
 .theme-items-list .button,
 .tainacan-modal .button,
+.theme-items-list .tainacan-form .button,
+.tainacan-modal .tainacan-form .button,
 .theme-items-list .filter-tags-list,
 .tainacan-modal .filter-tags-list,
 .theme-items-list .collapse-all__text,
@@ -582,6 +584,29 @@
 
 .tainacan-brennand-grid-item-thumbnail {
   max-height: calc(100% - 2.35rem - 1.75rem);
+}
+
+/* Checkboxes modal */
+
+.tainacan-modal:not(.filters-menu) .tainacan-modal-content {
+  font-size: 1.5rem;
+  padding: 36px 42px;
+}
+
+.tainacan-modal:not(.filters-menu) .tainacan-form .tainacan-modal-checkbox-list-body .b-checkbox.checkbox {
+  font-size: 1.5rem !important;
+}
+
+.tainacan-modal:not(.filters-menu) .tainacan-modal-title h2 {
+  font-weight: bold;
+}
+
+.tainacan-modal:not(.filters-menu) .tainacan-modal-title hr {
+  height: 4px;
+}
+
+.tainacan-modal:not(.filters-menu) .tainacan-form .button.is-outlined {
+  border-width: 3px;
 }
 
 /* Single Items page */
