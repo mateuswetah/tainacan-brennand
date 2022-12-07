@@ -25,7 +25,7 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
         </h2>
         <ul class="modular-grid list-none mx-0 my-5">
             <li class="modular-grid-sizer hidden md:block"></li>
-            <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); ?>
+            <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); $related_item = tainacan_get_item(); ?>
                 <li class="modular-grid-item flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-5 border-ob-red px-3.5 pt-4 pb-3 text-center">
                     <a class="h-full flex flex-col aspect-square" href="<?php echo get_permalink(); ?>">
                         <?php if ( has_post_thumbnail() ) : ?>
@@ -41,11 +41,39 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
                         <?php endif; ?>
 
                         <div class="grid metadata-title text-3xl font-bold mt-auto">
-                            <h3 class="truncate"><?php the_title(); ?></h3>
+                            <h3 class="truncate">
+                                <?php 
+                                    the_title();
+
+                                    $data_item_metadata = $related_item->get_metadata(array(
+                                        'id' => 238629 // 67 - ID of the year metadata
+                                    ));
+                                    $data = false;
+                                    
+                                    if ( $data_item_metadata && is_array($data_item_metadata) ) {
+                                        foreach ( $data_item_metadata as $item_metadatum ) {
+                                            $data = $item_metadatum->get_value_as_string();
+                                        }
+                                    }
+                                    if ($data)
+                                    echo ', ' . $data;
+                                ?>
+                            </h3>
                         </div>
-                        <div class="grid metadata-description text-xl">
-                                
-                        </div>
+                        <?php
+                            $category_item_metadata = $related_item->get_metadata(array(
+                                'id' => 304439 //442 - ID of the category metadata
+                            ));
+                            $category = false;
+                            
+                            if ( $category_item_metadata && is_array($category_item_metadata) ) {
+                                foreach ( $category_item_metadata as $item_metadatum ) {
+                                    $category = $item_metadatum->get_value_as_string();
+                                }
+                            }
+                            if ($category)
+                                echo '<div class="grid metadata-description text-xl">' . $category . '</div>';
+                        ?>
                     </a>
                 </li>	
             <?php endwhile; ?>
