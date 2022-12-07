@@ -580,6 +580,10 @@
   opacity: 1.0 !important;
 }
 
+.tainacan-brennand-grid-item-thumbnail {
+  max-height: calc(100% - 2.35rem - 1.75rem);
+}
+
 /* Single Items page */
 
 .tainacan-items-single-page {
