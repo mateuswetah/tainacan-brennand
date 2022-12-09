@@ -137,9 +137,9 @@
 }
 .tainacan-photoswipe-layer .pswp__caption,
 .tainacan-photoswipe-layer .pswp__name,
-.tainacan-photoswipe-layer .pswp__caption-inner,
-.tainacan-photoswipe-layer .pswp__counter    {
-    text-shadow: none !important;
+.tainacan-photoswipe-layer .pswp__caption-inner  {
+   display: none;
+   visibility: hidden;
 }
 .tainacan-photoswipe-layer .pswp__counter {
     display: block;

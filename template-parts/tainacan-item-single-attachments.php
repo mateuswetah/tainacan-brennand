@@ -3,8 +3,6 @@
 
     // Galley mode is a shortname for when documents and attachments are displayed merged in the same list
     $is_gallery_mode            = true;
-    $hide_file_name             = true;
-    $hide_file_name_main        = true;
     $hide_file_caption_main     = true;
     $hide_file_description_main = true;
     $disable_gallery_lightbox   = false;
@@ -22,13 +20,7 @@
 
             if ($is_gallery_mode) {
             
-                $class_slide_metadata = 'noLightbox ';
-                if ($hide_file_name_main)
-                    $class_slide_metadata .= ' hide-name';
-                if ($hide_file_description_main)
-                    $class_slide_metadata .= ' hide-description';
-                if ($hide_file_caption_main)
-                    $class_slide_metadata .= ' hide-caption';
+                $class_slide_metadata = 'noLightbox hide-name hide-description hide-caption';
 
                 if ( tainacan_has_document() ) {
                     $is_document_type_attachment = tainacan_get_the_document_type() === 'attachment';
@@ -39,9 +31,6 @@
                         tainacan_get_the_media_component_slide(array(
                             'media_content' => tainacan_get_the_document(),
                             'media_content_full' => $is_document_type_attachment ? tainacan_get_the_document(0, 'full') : ('<div class="attachment-without-image">' . tainacan_get_the_document(0, 'full') . '</div>'),
-                            'media_title' => $is_document_type_attachment ? get_the_title(tainacan_get_the_document_raw()) : '',
-                            'media_description' => $is_document_type_attachment ? get_the_content(tainacan_get_the_document_raw()) : '',
-                            'media_caption' => $is_document_type_attachment ? wp_get_attachment_caption( tainacan_get_the_document_raw() ) : '',
                             'media_type' => tainacan_get_the_document_type(),
                             'class_slide_content' => 'noLightbox',
                             'class_slide_metadata' => $class_slide_metadata
@@ -53,9 +42,6 @@
                         tainacan_get_the_media_component_slide(array(
                             'media_content' => tainacan_get_attachment_as_html($attachment->ID, 0),
                             'media_content_full' => wp_attachment_is('image', $attachment->ID) ? wp_get_attachment_image( $attachment->ID, 'full', false) : ('<div class="attachment-without-image tainacan-embed-container"><iframe id="tainacan-attachment-iframe" src="' . tainacan_get_attachment_html_url($attachment->ID) . '"></iframe></div>'),
-                            'media_title' => $attachment->post_title,
-                            'media_description' => $attachment->post_content,
-                            'media_caption' => $attachment->post_excerpt,
                             'media_type' => $attachment->post_mime_type,
                             'class_slide_content' => 'noLightbox',
                             'class_slide_metadata' => $class_slide_metadata
