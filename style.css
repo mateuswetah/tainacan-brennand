@@ -161,14 +161,16 @@
   width: 100%;
 }
 
-.theme-items-list .search-control .search-control-item.search-control-item--search::after {
-  content: "Filtros";
-  display: block;
-  margin-top: 1rem;
-  margin-left: 0rem;
-  font-size: 1.875rem;
-  font-weight: bold;
-  text-transform: capitalize;
+@media screen and (min-width: 769px) {
+  .theme-items-list .search-control .search-control-item.search-control-item--search::after {
+    content: "Filtros";
+    display: block;
+    margin-top: 1rem;
+    margin-left: 0rem;
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
 }
 
 .tainacan-modal .search-area,
@@ -607,6 +609,39 @@
 
 .tainacan-modal:not(.filters-menu) .tainacan-form .button.is-outlined {
   border-width: 3px;
+}
+
+/* Filters button */
+
+@media screen and (min-width: 769px) {
+  #tainacanFiltersButton {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#tainacanFiltersButton {
+  width: 100%;
+}
+
+#tainacanFiltersButton .button {
+  padding-left: 0 !important;
+  font-size: 1.875rem !important;
+  text-transform: capitalize;
+}
+
+#tainacanFiltersButton .button .is-hidden-touch {
+  display: block !important;
+}
+
+#tainacanFiltersButton .gray-icon {
+  order: 2;
+  font-size: 1.5rem;
+}
+
+#tainacanFiltersButton .tainacan-icon-filters::before {
+  content: "plus";
+  margin-top: -0.5rem;
 }
 
 /* Single Items page */
@@ -1410,6 +1445,10 @@ video {
 
 .mt-0 {
   margin-top: 0px;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mt-auto {

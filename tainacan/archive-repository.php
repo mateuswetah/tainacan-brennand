@@ -9,7 +9,7 @@
 			'default_view_mode' => 'brennandgrid',
 			'default_items_per_page' => 12,
 			'hide_filters' => false,
-			'hide_hide_filters_button' => true,
+			'hide_hide_filters_button' => false,
 			'hide_search' => false,
 			'hide_advanced_search' => true,
 			'hide_sort_by_button' => false,
