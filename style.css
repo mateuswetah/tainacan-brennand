@@ -832,6 +832,18 @@
   max-height: calc(100% - 2.35rem - 1.75rem);
 }
 
+.tainacan-media-component .swiper-slide:not(:only-child):after {
+  content: attr(aria-label);
+  display: block;
+  color: var(--section-color, #AF3C20);
+  z-index: 2;
+  font-size: 2.625rem;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0.25rem;
+  font-weight: bold;
+}
+
 /**
  * This injects Tailwind's base styles and any base styles registered by
  * plugins.
