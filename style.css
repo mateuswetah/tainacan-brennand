@@ -1864,12 +1864,8 @@ video {
     border-width: 4px;
   }
 
-  .lg\:border-5 {
-    border-width: 5px;
-  }
-
-  .lg\:border-b-5 {
-    border-bottom-width: 5px;
+  .lg\:border-b-4 {
+    border-bottom-width: 4px;
   }
 }
 

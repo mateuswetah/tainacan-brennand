@@ -26,7 +26,7 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
         <ul class="modular-grid list-none mx-0 mb-5 mt-2">
             <li class="modular-grid-sizer hidden md:block"></li>
             <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); $related_item = tainacan_get_item(); ?>
-                <li class="modular-grid-item flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-5 border-ob-red px-3.5 pt-4 pb-3 text-center">
+                <li class="modular-grid-item flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-4 border-ob-red px-3.5 pt-4 pb-3 text-center">
                     <a class="h-full flex flex-col aspect-square" href="<?php echo get_permalink(); ?>">
                         <?php if ( has_post_thumbnail() ) : ?>
                             <div class="tainacan-brennand-grid-item-thumbnail mt-auto mb-2 overflow-hidden">
