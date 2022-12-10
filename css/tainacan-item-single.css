@@ -88,6 +88,7 @@
 /* Seção de descrição do Acervo online */
 .tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online {
     font-size: 1.375rem; /* 22px */
+    padding-bottom: 3rem;
 }
 .tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online .tainacan-metadata-label {
     font-weight: normal;
@@ -104,6 +105,9 @@
 }
 .tainacan-items-single-page .metadata-slug-categoria+.metadata-slug-tecnica-4 {
     margin-left: 1rem;
+}
+.tainacan-items-single-page .metadata-slug-categoria+.metadata-slug-tecnica-4 .tainacan-metadata-value {
+    position: relative;
 }
 .tainacan-items-single-page .metadata-slug-categoria+.metadata-slug-tecnica-4 .tainacan-metadata-value::before {
     content: ",";

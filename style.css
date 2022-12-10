@@ -754,6 +754,7 @@
 .tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online {
   font-size: 1.375rem;
   /* 22px */
+  padding-bottom: 3rem;
 }
 
 .tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online .tainacan-metadata-label {
@@ -774,6 +775,10 @@
 
 .tainacan-items-single-page .metadata-slug-categoria+.metadata-slug-tecnica-4 {
   margin-left: 1rem;
+}
+
+.tainacan-items-single-page .metadata-slug-categoria+.metadata-slug-tecnica-4 .tainacan-metadata-value {
+  position: relative;
 }
 
 .tainacan-items-single-page .metadata-slug-categoria+.metadata-slug-tecnica-4 .tainacan-metadata-value::before {
@@ -1398,6 +1403,10 @@ video {
 
 .z-\[2\] {
   z-index: 2;
+}
+
+.z-\[1\] {
+  z-index: 1;
 }
 
 .mx-4 {

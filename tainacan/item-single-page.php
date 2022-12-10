@@ -32,7 +32,7 @@ section class... */
 
         <div class="overflow-y-auto lg:max-h-[68vh] h-full">
 
-            <h1 itemprop="name" class="bg-[var(--background-color)] sticky top-0 hidden lg:block border-b-3 lg:border-b-4 border-b-[var(--section-color)] text-[55px] leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
+            <h1 itemprop="name" class="bg-[var(--background-color)] z-[1] sticky top-0 hidden lg:block border-b-3 lg:border-b-4 border-b-[var(--section-color)] text-[55px] leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
 
             <?php tainacan_the_metadata_sections(array(
                 'hide_name' => true,
