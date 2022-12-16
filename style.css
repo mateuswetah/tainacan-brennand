@@ -30,7 +30,31 @@
   --tainacan-base-font-size: 1em;
   --tainacan-one-column: 2rem;
   --tainacan-container-padding: 2rem;
-  --tainacan-filter-menu-width-theme: 368px;
+  --tainacan-filter-menu-width-theme: calc(25% - 2rem);
+}
+
+@media (max-width: 1279px) {
+  .theme-items-list,
+    .tainacan-modal,
+    .tainacan-tooltip {
+    --tainacan-filter-menu-width-theme: calc(20% - 2rem);
+  }
+
+  .theme-items-list:not(.tainacan-modal) {
+    grid-template-columns: calc(20% - 2rem) calc(80% + 2rem);
+  }
+}
+
+@media (max-width: 1023px) {
+  .theme-items-list,
+    .tainacan-modal,
+    .tainacan-tooltip {
+    --tainacan-filter-menu-width-theme: calc(33.33333% - 2rem);
+  }
+
+  .theme-items-list:not(.tainacan-modal) {
+    grid-template-columns: calc(33.33333% - 2rem) calc(66.666665% + 2rem);
+  }
 }
 
 .tainacan-tooltip {
@@ -57,7 +81,7 @@
   display: grid;
   grid-template-areas: 'control items' 'filters items';
   grid-template-rows: auto;
-  grid-template-columns: 368px calc(100% - 368px);
+  grid-template-columns: calc(25% - 2rem) calc(75% + 2rem);
   grid-auto-rows: min-content;
 }
 
@@ -96,7 +120,7 @@
   padding-top: 0px;
   padding-left: 0;
   padding-bottom: 0px;
-  max-width: var(--tainacan-filter-menu-width-theme);
+  max-width: 100%;
   background-color: var(--tainacan-background-color, #DDDAD3);
 }
 
@@ -431,7 +455,7 @@
 
 .tainacan-modal #filters-items-list .collapse-content,
 .theme-items-list #filters-items-list .collapse-content {
-  padding-left: 2.25rem;
+  padding-left: 2.0rem;
   padding-right: 0.5rem;
   margin-top: 0px;
 }
