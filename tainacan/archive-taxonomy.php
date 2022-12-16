@@ -1,6 +1,6 @@
 <?php
 	$page_title = '<h1 class="m0 pt-2 pb-[1.25rem] text-[2.5rem] leading-[2.68rem] uppercase">' . __('Busca no Acervo', 'tainacan-brennand') . '</h1>';
-	$term_list_title = '<h1 class="m0 pt-2 pb-[1.25rem] text-[2.5rem] leading-[2.68rem] uppercase border-b-3 lg:border-b-4 border-b-[var(--section-color)]">' . $current_taxonomy->labels->name . ': ' . $current_term->get_name(); '</h1>';
+	$term_list_title = '<h1 class="m0 pt-2 pb-[1.25rem] text-[2.5rem] leading-[2.68rem] uppercase border-b-2 lg:border-b-3 border-b-[var(--section-color)]">' . $current_taxonomy->labels->name . ': ' . $current_term->get_name(); '</h1>';
 	echo '<script type="text/javascript">
 		wp.hooks.addFilter("tainacan_faceted_search_search_control_before", "tainacan-hooks", function() { return `' . $page_title . '`; });
 		wp.hooks.addFilter("tainacan_faceted_search_items_list_area_before", "tainacan-hooks", function() { return `' . $term_list_title . '`; });

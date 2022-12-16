@@ -1678,10 +1678,6 @@ video {
   border-width: 2px;
 }
 
-#app .border-b-3 {
-  border-bottom-width: 3px;
-}
-
 #app .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -1941,10 +1937,6 @@ video {
 
   #app .lg\:border-3 {
     border-width: 3px;
-  }
-
-  #app .lg\:border-b-4 {
-    border-bottom-width: 4px;
   }
 
   #app .lg\:border-b-3 {
