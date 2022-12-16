@@ -29,11 +29,11 @@
     padding-bottom: 1.0rem;
 }
 .tainacan-items-single-page section:not(:last-of-type) {
-    border-bottom: 3px solid var(--section-color, #AF3C20);
+    border-bottom: 1px solid var(--section-color, #AF3C20);
 }
 @media screen and (min-width: 1024px) {
     .tainacan-items-single-page section:not(:last-of-type) {
-        border-bottom: 5px solid var(--section-color, #AF3C20);
+        border-bottom: 2px solid var(--section-color, #AF3C20);
     }
 }
 .tainacan-items-single-page section a {
@@ -51,11 +51,7 @@
     visibility: visible;
     display: none;
 }
-@media screen and (min-width: 769px) {
-    .tainacan-items-single-page section.metadata-section-slug-default_section .tainacan-item-section__metadatum:first-child {
-        font-size: 2rem;
-    }   
-}
+
 
 /* Seção de créditos do Acervo online */
 .tainacan-items-single-page section.metadata-section-slug-creditos {
@@ -76,8 +72,9 @@
 
 /* Seção de classificação do Acervo online */
 .tainacan-items-single-page section.metadata-section-slug-secao-de-classificacao-do-acervo-online {
-    font-weight: bold;
-    font-size: 1.5rem; /* 24px */
+    font-weight: normal;
+    font-size: 1.375rem; /* 22px */
+    line-height: 1.875rem;
     text-transform: uppercase;
 }
 .tainacan-items-single-page section.metadata-section-slug-secao-de-classificacao-do-acervo-online .tainacan-metadata-label {
@@ -95,7 +92,7 @@
     text-transform: uppercase;
 }
 .tainacan-items-single-page section.metadata-section-slug-secao-de-descricao-do-acervo-online .tainacan-metadata-value {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 /* These two metadata in particular should be displayed together */
@@ -155,6 +152,9 @@
 }
 .tainacan-brennand-grid-item-thumbnail {
     max-height: calc(100% - 2.35rem - 1.75rem);
+}
+.tainacan-items-single-page section a.aspect-square:not(:hover) {
+    text-decoration: none;
 }
 
 .tainacan-media-component .swiper-slide:not(:only-child):after {

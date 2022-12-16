@@ -9,7 +9,7 @@
 	<?php tainacan_the_collection_description(); ?>
 </div>
 ?*/
-	$page_title = '<h1 class="m0 pt-2 pb-4 font-bold text-[2.5rem] leading-[2.68rem] uppercase">' . __('Busca no Acervo', 'tainacan-brennand') . '</h1>';
+	$page_title = '<h1 class="m0 pt-2 pb-4 text-[2.5rem] leading-[2.68rem] uppercase">' . __('Busca no Acervo', 'tainacan-brennand') . '</h1>';
 	echo '<script type="text/javascript">
 		wp.hooks.addFilter("tainacan_faceted_search_search_control_before", "tainacan-hooks", function() { return `' . $page_title . '`; });
 	</script>';

@@ -20,7 +20,7 @@ section class... */
 
 <div class="mt-[12px] flex flex-col lg:flex-row lg:justify-between gap-9">
 
-    <h1 itemprop="name" class="block lg:hidden border-b-3 lg:border-b-4 border-b-[var(--section-color)] text-[55px] leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
+    <h1 itemprop="name" class="block lg:hidden border-b-2 lg:border-b-3 border-b-[var(--section-color)] title-size uppercase pb-5"><?php echo single_post_title(); ?></h1>
 
     <div class="w-full lg:w-50% max-h-full overflow-hidden">
         <div class="w-auto h-full lg:sticky lg:max-h-[68vh]">
@@ -32,7 +32,7 @@ section class... */
 
         <div class="overflow-y-auto lg:max-h-[68vh] h-full">
 
-            <h1 itemprop="name" class="bg-[var(--background-color)] z-[1] sticky top-0 hidden lg:block border-b-3 lg:border-b-4 border-b-[var(--section-color)] text-[55px] leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
+            <h1 itemprop="name" class="bg-[var(--background-color)] z-[1] sticky top-0 hidden lg:block border-b-2 lg:border-b-3 border-b-[var(--section-color)] title-size leading-[1.05] uppercase pb-5"><?php echo single_post_title(); ?></h1>
 
             <?php tainacan_the_metadata_sections(array(
                 'hide_name' => true,
@@ -48,7 +48,7 @@ section class... */
                 )
             )); ?>
 
-            <div class="absolute bottom-0 flex justify-between w-full h-12 border-b-3 lg:border-b-4 border-b-[var(--section-color)] text-xl font-bold items-end gap-3 leading-[1.05] lowercase bg-[var(--background-color)]">
+            <div class="absolute bottom-0 flex justify-between w-full h-12 border-b-1 lg:border-b-2 border-b-[var(--section-color)] text-xl font-bold items-end gap-3 leading-[1.05] lowercase bg-[var(--background-color)]">
                 <?php tainacan_brennand_item_navigation(); ?>
             </div>
         </div>    

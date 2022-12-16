@@ -3,7 +3,7 @@
 		<li class="modular-grid-sizer hidden md:block"></li>
 		<?php $item_index = 0; while ( have_posts() ) : the_post(); $item = tainacan_get_item(); ?>
 			
-			<li class="modular-grid-item mb-6 flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-4 border-ob-red px-3.5 pt-4 pb-3 text-center">
+			<li class="modular-grid-item mb-6 flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-2 lg:border-3 border-ob-red px-3.5 pt-4 pb-3 text-center">
 				<a class="h-full flex flex-col aspect-square" href="<?php echo tainacan_brennand_get_item_link_for_navigation(get_permalink(), $item_index); ?>">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<div class="tainacan-brennand-grid-item-thumbnail mt-auto mb-2 overflow-hidden">
@@ -17,7 +17,7 @@
 						</div>
 					<?php endif; ?>
 
-					<div class="grid metadata-title text-3xl font-bold mt-auto">
+					<div class="grid metadata-title text-2xl font-bold mt-auto">
 						<h3 class="truncate">
 							<?php 
 								the_title();

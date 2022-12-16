@@ -2,7 +2,7 @@
 
 $item = tainacan_get_item();
 $terms_item_metadata = $item->get_metadata(array(
-    'id' => 127 // 442 - ID of the terms metadata
+    'id' => 442 // 127 - ID of the terms metadata
 ));
 $terms = [];
 
@@ -20,13 +20,13 @@ if ( $terms && is_array($terms) )
 if ( $related_items_query && $related_items_query->have_posts() ): ?>
 <div class="w-full text-[var(--section-color)]">
     <section class="tainacan-item-section tainacan-item-section--items-related-to-this">
-        <h2 class="mt-2 font-bold uppercase text-[2.5rem] leading-[2.68rem]" id="tainacan-item-items-related-to-this-label">
+        <h2 class="mt-2 uppercase title-size ng-[2.68rem]" id="tainacan-item-items-related-to-this-label">
             <?php echo _e('Veja também', 'tainacan-brennand') ?>
         </h2>
         <ul class="modular-grid list-none mx-0 mb-5 mt-2">
             <li class="modular-grid-sizer hidden md:block"></li>
             <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); $related_item = tainacan_get_item(); ?>
-                <li class="modular-grid-item mb-6 flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-3 lg:border-4 border-ob-red px-3.5 pt-4 pb-3 text-center">
+                <li class="modular-grid-item mb-6 flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-2 lg:border-3 border-ob-red px-3.5 pt-4 pb-3 text-center">
                     <a class="h-full flex flex-col aspect-square" href="<?php echo get_permalink(); ?>">
                         <?php if ( has_post_thumbnail() ) : ?>
                             <div class="tainacan-brennand-grid-item-thumbnail mt-auto mb-2 overflow-hidden">
@@ -40,13 +40,13 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
                             </div>
                         <?php endif; ?>
 
-                        <div class="grid metadata-title text-3xl font-bold mt-auto">
+                        <div class="grid metadata-title text-2xl font-bold mt-auto">
                             <h3 class="truncate">
                                 <?php 
                                     the_title();
 
                                     $data_item_metadata = $related_item->get_metadata(array(
-                                        'id' => 238629 // 67 - ID of the year metadata
+                                        'id' => 67 // 238629 - ID of the year metadata
                                     ));
                                     $data = false;
                                     

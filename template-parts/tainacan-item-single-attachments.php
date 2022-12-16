@@ -11,7 +11,7 @@
 
     if ( (!empty( $attachments ) || ( $is_gallery_mode && tainacan_has_document() ) ) ) {
     ?>
-        <section class="h-full border-3 lg:border-4 border-[var(--section-color)] p-3.5 text-center tainacan-item-section tainacan-item-section--<?php echo ((!$is_gallery_mode ? 'attachments' : 'gallery')) ?>">
+        <section class="h-full border-2 lg:border-3 border-[var(--section-color)] p-3.5 text-center tainacan-item-section tainacan-item-section--<?php echo ((!$is_gallery_mode ? 'attachments' : 'gallery')) ?>">
 
             <?php 
             
