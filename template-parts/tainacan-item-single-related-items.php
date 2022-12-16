@@ -2,7 +2,7 @@
 
 $item = tainacan_get_item();
 $terms_item_metadata = $item->get_metadata(array(
-    'id' => 442 // 127 - ID of the terms metadata
+    'id' => 127// 442 - ID of the terms metadata
 ));
 $terms = [];
 
@@ -46,7 +46,7 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
                                     the_title();
 
                                     $data_item_metadata = $related_item->get_metadata(array(
-                                        'id' => 67 // 238629 - ID of the year metadata
+                                        'id' => 238629 // 67 - ID of the year metadata
                                     ));
                                     $data = false;
                                     
