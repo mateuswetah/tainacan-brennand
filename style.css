@@ -1400,444 +1400,444 @@ video {
   * by plugins.
   */
 
-#app .absolute {
+.tainacan-custom-template .absolute {
   position: absolute;
 }
 
-#app .relative {
+.tainacan-custom-template .relative {
   position: relative;
 }
 
-#app .sticky {
+.tainacan-custom-template .sticky {
   position: sticky;
 }
 
-#app .top-0 {
+.tainacan-custom-template .top-0 {
   top: 0px;
 }
 
-#app .bottom-0 {
+.tainacan-custom-template .bottom-0 {
   bottom: 0px;
 }
 
-#app .z-10 {
+.tainacan-custom-template .z-10 {
   z-index: 10;
 }
 
-#app .z-\[2\] {
+.tainacan-custom-template .z-\[2\] {
   z-index: 2;
 }
 
-#app .z-\[1\] {
+.tainacan-custom-template .z-\[1\] {
   z-index: 1;
 }
 
-#app .mx-4 {
+.tainacan-custom-template .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-#app .mx-auto {
+.tainacan-custom-template .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
 
-#app .mx-0 {
+.tainacan-custom-template .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
 }
 
-#app .mr-\[4px\] {
+.tainacan-custom-template .mr-\[4px\] {
   margin-right: 4px;
 }
 
-#app .mt-\[2px\] {
+.tainacan-custom-template .mt-\[2px\] {
   margin-top: 2px;
 }
 
-#app .mr-auto {
+.tainacan-custom-template .mr-auto {
   margin-right: auto;
 }
 
-#app .mb-0\.5 {
+.tainacan-custom-template .mb-0\.5 {
   margin-bottom: 0.125rem;
 }
 
-#app .mb-0 {
+.tainacan-custom-template .mb-0 {
   margin-bottom: 0px;
 }
 
-#app .ml-2 {
+.tainacan-custom-template .ml-2 {
   margin-left: 0.5rem;
 }
 
-#app .mr-2 {
+.tainacan-custom-template .mr-2 {
   margin-right: 0.5rem;
 }
 
-#app .mt-\[12px\] {
+.tainacan-custom-template .mt-\[12px\] {
   margin-top: 12px;
 }
 
-#app .mb-9 {
+.tainacan-custom-template .mb-9 {
   margin-bottom: 2.25rem;
 }
 
-#app .ml-0 {
+.tainacan-custom-template .ml-0 {
   margin-left: 0px;
 }
 
-#app .mt-0 {
+.tainacan-custom-template .mt-0 {
   margin-top: 0px;
 }
 
-#app .mb-6 {
+.tainacan-custom-template .mb-6 {
   margin-bottom: 1.5rem;
 }
 
-#app .mt-auto {
+.tainacan-custom-template .mt-auto {
   margin-top: auto;
 }
 
-#app .mb-2 {
+.tainacan-custom-template .mb-2 {
   margin-bottom: 0.5rem;
 }
 
-#app .mb-8 {
+.tainacan-custom-template .mb-8 {
   margin-bottom: 2rem;
 }
 
-#app .-mb-1\.5 {
+.tainacan-custom-template .-mb-1\.5 {
   margin-bottom: -0.375rem;
 }
 
-#app .mt-4 {
+.tainacan-custom-template .mt-4 {
   margin-top: 1rem;
 }
 
-#app .-mb-1 {
+.tainacan-custom-template .-mb-1 {
   margin-bottom: -0.25rem;
 }
 
-#app .mt-2 {
+.tainacan-custom-template .mt-2 {
   margin-top: 0.5rem;
 }
 
-#app .mb-5 {
+.tainacan-custom-template .mb-5 {
   margin-bottom: 1.25rem;
 }
 
-#app .block {
+.tainacan-custom-template .block {
   display: block;
 }
 
-#app .inline-block {
+.tainacan-custom-template .inline-block {
   display: inline-block;
 }
 
-#app .flex {
+.tainacan-custom-template .flex {
   display: flex;
 }
 
-#app .inline-flex {
+.tainacan-custom-template .inline-flex {
   display: inline-flex;
 }
 
-#app .grid {
+.tainacan-custom-template .grid {
   display: grid;
 }
 
-#app .hidden {
+.tainacan-custom-template .hidden {
   display: none;
 }
 
-#app .aspect-square {
+.tainacan-custom-template .aspect-square {
   aspect-ratio: 1 / 1;
 }
 
-#app .h-auto {
+.tainacan-custom-template .h-auto {
   height: auto;
 }
 
-#app .h-8 {
+.tainacan-custom-template .h-8 {
   height: 2rem;
 }
 
-#app .h-full {
+.tainacan-custom-template .h-full {
   height: 100%;
 }
 
-#app .h-12 {
+.tainacan-custom-template .h-12 {
   height: 3rem;
 }
 
-#app .max-h-full {
+.tainacan-custom-template .max-h-full {
   max-height: 100%;
 }
 
-#app .w-\[10px\] {
+.tainacan-custom-template .w-\[10px\] {
   width: 10px;
 }
 
-#app .w-full {
+.tainacan-custom-template .w-full {
   width: 100%;
 }
 
-#app .w-\[4px\] {
+.tainacan-custom-template .w-\[4px\] {
   width: 4px;
 }
 
-#app .w-auto {
+.tainacan-custom-template .w-auto {
   width: auto;
 }
 
-#app .max-w-\[218px\] {
+.tainacan-custom-template .max-w-\[218px\] {
   max-width: 218px;
 }
 
-#app .max-w-\[798px\] {
+.tainacan-custom-template .max-w-\[798px\] {
   max-width: 798px;
 }
 
-#app .rotate-180 {
+.tainacan-custom-template .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-#app .transform {
+.tainacan-custom-template .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-#app .list-none {
+.tainacan-custom-template .list-none {
   list-style-type: none;
 }
 
-#app .flex-col {
+.tainacan-custom-template .flex-col {
   flex-direction: column;
 }
 
-#app .flex-wrap {
+.tainacan-custom-template .flex-wrap {
   flex-wrap: wrap;
 }
 
-#app .items-end {
+.tainacan-custom-template .items-end {
   align-items: flex-end;
 }
 
-#app .items-center {
+.tainacan-custom-template .items-center {
   align-items: center;
 }
 
-#app .justify-center {
+.tainacan-custom-template .justify-center {
   justify-content: center;
 }
 
-#app .justify-between {
+.tainacan-custom-template .justify-between {
   justify-content: space-between;
 }
 
-#app .gap-1 {
+.tainacan-custom-template .gap-1 {
   gap: 0.25rem;
 }
 
-#app .gap-9 {
+.tainacan-custom-template .gap-9 {
   gap: 2.25rem;
 }
 
-#app .gap-3 {
+.tainacan-custom-template .gap-3 {
   gap: 0.75rem;
 }
 
-#app .self-start {
+.tainacan-custom-template .self-start {
   align-self: flex-start;
 }
 
-#app .self-stretch {
+.tainacan-custom-template .self-stretch {
   align-self: stretch;
 }
 
-#app .justify-self-stretch {
+.tainacan-custom-template .justify-self-stretch {
   justify-self: stretch;
 }
 
-#app .overflow-hidden {
+.tainacan-custom-template .overflow-hidden {
   overflow: hidden;
 }
 
-#app .overflow-y-auto {
+.tainacan-custom-template .overflow-y-auto {
   overflow-y: auto;
 }
 
-#app .truncate {
+.tainacan-custom-template .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-#app .border-2 {
+.tainacan-custom-template .border-2 {
   border-width: 2px;
 }
 
-#app .border-b-2 {
+.tainacan-custom-template .border-b-2 {
   border-bottom-width: 2px;
 }
 
-#app .border-t-\[3px\] {
+.tainacan-custom-template .border-t-\[3px\] {
   border-top-width: 3px;
 }
 
-#app .border-ob-red {
+.tainacan-custom-template .border-ob-red {
   --tw-border-opacity: 1;
   border-color: rgb(175 60 32 / var(--tw-border-opacity));
 }
 
-#app .border-\[var\(--section-color\)\] {
+.tainacan-custom-template .border-\[var\(--section-color\)\] {
   border-color: var(--section-color);
 }
 
-#app .border-b-\[var\(--section-color\)\] {
+.tainacan-custom-template .border-b-\[var\(--section-color\)\] {
   border-bottom-color: var(--section-color);
 }
 
-#app .bg-\[var\(--background-color\)\] {
+.tainacan-custom-template .bg-\[var\(--background-color\)\] {
   background-color: var(--background-color);
 }
 
-#app .fill-\[var\(--section-color\)\] {
+.tainacan-custom-template .fill-\[var\(--section-color\)\] {
   fill: var(--section-color);
 }
 
-#app .p-3\.5 {
+.tainacan-custom-template .p-3\.5 {
   padding: 0.875rem;
 }
 
-#app .p-3 {
+.tainacan-custom-template .p-3 {
   padding: 0.75rem;
 }
 
-#app .py-0\.5 {
+.tainacan-custom-template .py-0\.5 {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
 }
 
-#app .py-0 {
+.tainacan-custom-template .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
-#app .px-3\.5 {
+.tainacan-custom-template .px-3\.5 {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
 }
 
-#app .px-3 {
+.tainacan-custom-template .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
 
-#app .py-8 {
+.tainacan-custom-template .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-#app .pt-2 {
+.tainacan-custom-template .pt-2 {
   padding-top: 0.5rem;
 }
 
-#app .pb-4 {
+.tainacan-custom-template .pb-4 {
   padding-bottom: 1rem;
 }
 
-#app .pb-\[1\.25rem\] {
+.tainacan-custom-template .pb-\[1\.25rem\] {
   padding-bottom: 1.25rem;
 }
 
-#app .pb-5 {
+.tainacan-custom-template .pb-5 {
   padding-bottom: 1.25rem;
 }
 
-#app .pt-4 {
+.tainacan-custom-template .pt-4 {
   padding-top: 1rem;
 }
 
-#app .pb-3 {
+.tainacan-custom-template .pb-3 {
   padding-bottom: 0.75rem;
 }
 
-#app .pl-0 {
+.tainacan-custom-template .pl-0 {
   padding-left: 0px;
 }
 
-#app .pr-4 {
+.tainacan-custom-template .pr-4 {
   padding-right: 1rem;
 }
 
-#app .text-center {
+.tainacan-custom-template .text-center {
   text-align: center;
 }
 
-#app .font-kobel {
+.tainacan-custom-template .font-kobel {
   font-family: Kobel;
 }
 
-#app .text-\[2\.5rem\] {
+.tainacan-custom-template .text-\[2\.5rem\] {
   font-size: 2.5rem;
 }
 
-#app .text-2xl {
+.tainacan-custom-template .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-#app .text-xl {
+.tainacan-custom-template .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-#app .text-lg {
+.tainacan-custom-template .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-#app .text-4xl {
+.tainacan-custom-template .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
-#app .text-3xl {
+.tainacan-custom-template .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 
-#app .font-bold {
+.tainacan-custom-template .font-bold {
   font-weight: 700;
 }
 
-#app .uppercase {
+.tainacan-custom-template .uppercase {
   text-transform: uppercase;
 }
 
-#app .lowercase {
+.tainacan-custom-template .lowercase {
   text-transform: lowercase;
 }
 
-#app .leading-\[2\.68rem\] {
+.tainacan-custom-template .leading-\[2\.68rem\] {
   line-height: 2.68rem;
 }
 
-#app .leading-\[1\.05\] {
+.tainacan-custom-template .leading-\[1\.05\] {
   line-height: 1.05;
 }
 
-#app .leading-5 {
+.tainacan-custom-template .leading-5 {
   line-height: 1.25rem;
 }
 
-#app .text-\[var\(--section-color\)\] {
+.tainacan-custom-template .text-\[var\(--section-color\)\] {
   color: var(--section-color);
 }
 
-#app .text-ob-red {
+.tainacan-custom-template .text-ob-red {
   --tw-text-opacity: 1;
   color: rgb(175 60 32 / var(--tw-text-opacity));
 }
@@ -1851,113 +1851,113 @@ video {
   */
 
 @media (min-width: 768px) {
-  #app .md\:mr-14 {
+  .tainacan-custom-template .md\:mr-14 {
     margin-right: 3.5rem;
   }
 
-  #app .md\:mb-0 {
+  .tainacan-custom-template .md\:mb-0 {
     margin-bottom: 0px;
   }
 
-  #app .md\:mt-0 {
+  .tainacan-custom-template .md\:mt-0 {
     margin-top: 0px;
   }
 
-  #app .md\:block {
+  .tainacan-custom-template .md\:block {
     display: block;
   }
 
-  #app .md\:w-1\/3 {
+  .tainacan-custom-template .md\:w-1\/3 {
     width: 33.333333%;
   }
 
-  #app .md\:shrink-0 {
+  .tainacan-custom-template .md\:shrink-0 {
     flex-shrink: 0;
   }
 
-  #app .md\:grow {
+  .tainacan-custom-template .md\:grow {
     flex-grow: 1;
   }
 
-  #app .md\:flex-row {
+  .tainacan-custom-template .md\:flex-row {
     flex-direction: row;
   }
 
-  #app .md\:self-auto {
+  .tainacan-custom-template .md\:self-auto {
     align-self: auto;
   }
 
-  #app .md\:px-0 {
+  .tainacan-custom-template .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
   }
 }
 
 @media (min-width: 1024px) {
-  #app .lg\:sticky {
+  .tainacan-custom-template .lg\:sticky {
     position: sticky;
   }
 
-  #app .lg\:top-0 {
+  .tainacan-custom-template .lg\:top-0 {
     top: 0px;
   }
 
-  #app .lg\:\!mx-8 {
+  .tainacan-custom-template .lg\:\!mx-8 {
     margin-left: 2rem !important;
     margin-right: 2rem !important;
   }
 
-  #app .lg\:mr-16 {
+  .tainacan-custom-template .lg\:mr-16 {
     margin-right: 4rem;
   }
 
-  #app .lg\:block {
+  .tainacan-custom-template .lg\:block {
     display: block;
   }
 
-  #app .lg\:hidden {
+  .tainacan-custom-template .lg\:hidden {
     display: none;
   }
 
-  #app .lg\:max-h-\[68vh\] {
+  .tainacan-custom-template .lg\:max-h-\[68vh\] {
     max-height: 68vh;
   }
 
-  #app .lg\:w-\[6px\] {
+  .tainacan-custom-template .lg\:w-\[6px\] {
     width: 6px;
   }
 
-  #app .lg\:flex-row {
+  .tainacan-custom-template .lg\:flex-row {
     flex-direction: row;
   }
 
-  #app .lg\:justify-between {
+  .tainacan-custom-template .lg\:justify-between {
     justify-content: space-between;
   }
 
-  #app .lg\:border-3 {
+  .tainacan-custom-template .lg\:border-3 {
     border-width: 3px;
   }
 
-  #app .lg\:border-b-3 {
+  .tainacan-custom-template .lg\:border-b-3 {
     border-bottom-width: 3px;
   }
 
-  #app .lg\:border-b-2 {
+  .tainacan-custom-template .lg\:border-b-2 {
     border-bottom-width: 2px;
   }
 }
 
 @media (min-width: 1536px) {
-  #app .\32xl\:mb-0 {
+  .tainacan-custom-template .\32xl\:mb-0 {
     margin-bottom: 0px;
   }
 
-  #app .\32xl\:mr-20 {
+  .tainacan-custom-template .\32xl\:mr-20 {
     margin-right: 5rem;
   }
 
-  #app .\32xl\:w-\[8px\] {
+  .tainacan-custom-template .\32xl\:w-\[8px\] {
     width: 8px;
   }
 }

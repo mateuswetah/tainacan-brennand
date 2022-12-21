@@ -6,7 +6,7 @@ module.exports = {
         './tainacan/*.php',
         './template-parts/*.php'
     ],
-    important: '#app',
+    important: '.tainacan-custom-template',
     theme: {
       extend: {
         colors: {

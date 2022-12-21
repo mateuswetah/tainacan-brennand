@@ -63,6 +63,7 @@ if ( !function_exists('tainacan_brennand_post_class') ) {
                 
             if ( in_array($current_post_type, array_merge($collections_post_types, array('tainacan-items'))) ) {
                 $classes[] = 'tainacan-items-archive-page';
+                $classes[] = 'tainacan-custom-template';
             }
         } else if ( is_single() && is_singular() && is_main_query() ) {
             $collections_post_types = \Tainacan\Repositories\Repository::get_collections_db_identifiers();
@@ -71,6 +72,7 @@ if ( !function_exists('tainacan_brennand_post_class') ) {
 			// Check if we're inside the main loop in a single Post.
 			if ( in_array($post_type, $collections_post_types)  ) {
                $classes[] = 'tainacan-items-single-page';
+               $classes[] = 'tainacan-custom-template';
 			}
         }
 
