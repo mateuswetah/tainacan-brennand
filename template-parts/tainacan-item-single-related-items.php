@@ -23,7 +23,7 @@ if ( $related_items_query && $related_items_query->have_posts() ): ?>
         <h2 class="mt-2 uppercase title-size ng-[2.68rem]" id="tainacan-item-items-related-to-this-label">
             <?php echo _e('Veja também', 'tainacan-brennand') ?>
         </h2>
-        <ul class="modular-grid list-none mx-0 mb-5 mt-2">
+        <ul class="modular-grid modular-grid--related-items list-none mx-0 mb-5 mt-2">
             <li class="modular-grid-sizer hidden md:block"></li>
             <?php while ( $related_items_query->have_posts() ): $related_items_query->the_post(); $related_item = tainacan_get_item(); ?>
                 <li class="modular-grid-item mb-6 flex items-center justify-center justify-self-stretch self-stretch tainacan-brennand-grid-item aspect-square group border-2 lg:border-3 border-ob-red px-3.5 pt-4 pb-3 text-center">
