@@ -8,7 +8,7 @@ $current_term = \Tainacan\Repositories\Terms::get_instance()->fetch($current_wpt
 $current_taxonomy->labels->name;
 ?>
 <div class="h-8 mb-0.5">
-	<ul class="z-10 flex flex-wrap py-0.5 2xl:mb-0 mx-4 lg:!mx-8 lg:top-0 w-full  bg-[var(--background-color)]">
+	<ul class="flex flex-wrap py-0.5 2xl:mb-0 mpy-0.5 px-4 xl:px-9 z-[2] lg:top-0 w-full bg-[var(--background-color)]">
 		<li class="flex items-center">
 			<a href="<?php get_home_url(); ?>" class="tiny-text-size text-[var(--section-color)] lowercase">
 				<?php _e('Home', 'tainacan-brennand'); ?>            
