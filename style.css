@@ -1420,10 +1420,6 @@ video {
   bottom: 0px;
 }
 
-.tainacan-custom-template .z-10 {
-  z-index: 10;
-}
-
 .tainacan-custom-template .z-\[2\] {
   z-index: 2;
 }
@@ -1720,6 +1716,11 @@ video {
   padding-bottom: 0.125rem;
 }
 
+.tainacan-custom-template .px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .tainacan-custom-template .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -1945,6 +1946,13 @@ video {
 
   .tainacan-custom-template .lg\:border-b-2 {
     border-bottom-width: 2px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .tainacan-custom-template .xl\:px-9 {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 
