@@ -162,16 +162,15 @@ if ( !function_exists('tainacan_brennand_get_related_items') ) {
  * Retrieves the "Acervo" page to be used on the breadcrumbs
  */
 function tainacan_brennand_get_acervo_page() {
-	$pages = get_pages(array(
-		'meta_key' => '_wp_page_template',
-		'meta_value' => 'collection.blade.php',
-		'post_status' =>['publish', 'private'],
-		'hierarchical' => false,
-	));
+	$pages = get_page_by_title('Acervo Digital');
 	
 	$acervo_page = false;
-	if ( count($pages) > 0 && !empty($pages[0]) )
+	if (is_array($pages) && count($pages) > 0 && !empty($pages[0]) ) {
 		$acervo_page = $pages[0];
+	}
+	else if (!empty($pages)) {
+		$acervo_page = $pages;
+	}
 
 	return $acervo_page;
 }
